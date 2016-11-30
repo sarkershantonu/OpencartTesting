@@ -9,4 +9,3 @@ Feature: valid search
     And I can see the search should not take more than 10 second
     Then I quit browser
 
-

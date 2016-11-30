@@ -1,5 +1,3 @@
-
-
 Feature: Invalid search
 
   Scenario: Checking invalid search
