@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
