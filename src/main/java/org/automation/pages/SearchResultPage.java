@@ -1,7 +1,7 @@
 package org.automation.pages;
 
-import org.automation.CompletePage;
-import org.automation.PageBase;
+import org.automation.core.CompletePage;
+import org.automation.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by shantonu on 6/4/16.
  */
-public class SearchResultPage extends PageBase implements CompletePage{
+public class SearchResultPage extends PageBase implements CompletePage {
     public SearchResultPage(WebDriver aDriver) {
         super(aDriver);
     }
