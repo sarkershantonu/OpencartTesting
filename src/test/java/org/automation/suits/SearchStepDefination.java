@@ -14,13 +14,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 
-/**
- * Created by shantonu on 5/6/16.
- */
 
-/**
- *
- */
 public class SearchStepDefination {
     private WebDriver driver;
     private HomePage home;
@@ -68,15 +62,6 @@ public class SearchStepDefination {
         Assert.assertEquals(arg1,resultPage.getTitle());
         end= System.currentTimeMillis();
     }
-/* => this only takes a word
-    @And("^I type (.+) in search box And I click search button$")
-    public void i_type_in_Iphone_in_search_box_And_I_click_search_button(String word) throws Throwable {
-        home.search.textBox.clear();
-        home.search.textBox.sendKeys(word);
-        home.search.button.click();
-        resultPage = new SearchResultPage(driver);
-    }
-*/
     @And("^I type \"([^\"]*)\" in search box And I click search button$")
     public void i_type_in_Iphone_in_search_box_And_I_click_search(String word) throws Throwable {
 
@@ -95,7 +80,6 @@ public class SearchStepDefination {
 
     @Then("^I quit browser$")
     public void i_quit_browser() throws Throwable {
-        ScreenshotUtil.takeFullScreen("endingtests"+System.currentTimeMillis(),driver);
         Browser.close();
     }
 }
