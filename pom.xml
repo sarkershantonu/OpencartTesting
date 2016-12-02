@@ -89,4 +89,10 @@
             <version>1.5.2</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource></resource>
+        </resources>
+    </build>
 </project>
