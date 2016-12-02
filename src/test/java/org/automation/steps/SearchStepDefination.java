@@ -1,4 +1,4 @@
-package org.automation.suits;
+package org.automation.steps;
 
 
 import cucumber.api.java.en.And;
