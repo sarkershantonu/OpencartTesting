@@ -92,7 +92,10 @@
 
     <build>
         <resources>
-            <resource></resource>
+            <resource>
+                <directory>src/test/resources</directory>
+                <includes>**.*</includes>
+            </resource>
         </resources>
     </build>
 </project>
