@@ -8,4 +8,3 @@ Feature: valid search
     Then I can see search results with title "Search - Iphone"
     And I can see the search should not take more than 10 second
     Then I quit browser
-
