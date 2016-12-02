@@ -16,16 +16,16 @@ import java.io.IOException;
 public class Browser {
     private static WebDriver driver = null;
     private static String os = System.getProperty("os.name");
-    private static String chromeDriverPathWIN = "./drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
-    //private static String chromeDriverPathLINUX = "/usr/local/bin/chromedriver";
-    private static String chromeDriverPathLINUX = "./drivers/chrome/linux64/chromedriver";
+
+    private static String chromeDriverPathWIN = "./target/test-classes/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
+    private static String chromeDriverPathLINUX = "./target/test-classes/drivers/chrome/linux64/chromedriver";
     private static String chromePathLINUX="";
     private static String chromePathWIN="";
     private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
     private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-    private static String firefoxGekoDriverPathLINUX="./drivers/firefox/linux64/geckodriver";
-    private static String firefoxGekoDriverPathWIN="./drivers/firefox/win64/geckodriver.exe";
-    private static String IEServerPath = "./drivers/ie86/IEDriverServer.exe";
+    private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
+    private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
+    private static String IEServerPath = "./target/test-classes/drivers/ie86/IEDriverServer.exe";
 
     public static WebDriver getInstance() {
         if (driver == null) {
