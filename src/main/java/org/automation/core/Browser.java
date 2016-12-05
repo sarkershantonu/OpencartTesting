@@ -23,7 +23,7 @@ public class Browser {
     private static String chromePathWIN="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
 
     private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
-    private static String firefoxPathWIN="C:\\Users\\ssarker\\Downloads\\FirefoxPortable64-50.0\\FirefoxPortable64\\FirefoxPortable.exe";
+    private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
     private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
     private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
     private static String IEServerPath = "./target/test-classes/drivers/ie86/IEDriverServer.exe";
