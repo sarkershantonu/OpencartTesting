@@ -20,9 +20,10 @@ public class Browser {
     private static String chromeDriverPathWIN = "./target/test-classes/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
     private static String chromeDriverPathLINUX = "./target/test-classes/drivers/chrome/linux64/chromedriver";
     private static String chromePathLINUX="";
-    private static String chromePathWIN="";
+    private static String chromePathWIN="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
+
     private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
-    private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+    private static String firefoxPathWIN="C:\\Users\\ssarker\\Downloads\\FirefoxPortable64-47.0.1\\FirefoxPortable64\\FirefoxPortable.exe";
     private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
     private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
     private static String IEServerPath = "./target/test-classes/drivers/ie86/IEDriverServer.exe";
@@ -110,7 +111,8 @@ public class Browser {
 
     public static void close() {
         driver.close();
-        driver = null;// to avoid closeing time of browser by JVM
+        driver.quit();
+        driver = null;// to avoid closing time of browser by JVM
     }
 
     private static DesiredCapabilities getLocalChrome() {
