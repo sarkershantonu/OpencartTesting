@@ -111,7 +111,7 @@ public class Browser {
 
     public static void close() {
         driver.close();
-        driver.quit();
+        driver.quit();//this is to make process of browser kill
         driver = null;// to avoid closing time of browser by JVM
     }
 
