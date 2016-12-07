@@ -12,4 +12,4 @@ Feature: Compatibility checks
       |browser|
       |chrome |
       |firefox|
-      |ie     |
+      |ie|

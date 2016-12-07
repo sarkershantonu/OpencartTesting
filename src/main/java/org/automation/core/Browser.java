@@ -21,7 +21,6 @@ public class Browser {
     private static String chromeDriverPathLINUX = "./target/test-classes/drivers/chrome/linux64/chromedriver";
     private static String chromePathLINUX="";
     private static String chromePathWIN="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
-
     private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
     private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
     private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
@@ -34,19 +33,15 @@ public class Browser {
         }
         return driver;
     }
-
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
         }
         return driver;
     }
-
     private Browser() {
     }
-
     private static WebDriver getABrowser(String nameOfBrowser) {
-
        // System.out.println("OS>>>" + os);
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
@@ -92,7 +87,6 @@ public class Browser {
             return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         }
     }
-
     private static ChromeOptions getLocalChromeOptions() {
         String exeChromium = "<path to your chtome or chromium >chrome.exe";
         ChromeOptions options = new ChromeOptions();
