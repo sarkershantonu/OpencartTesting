@@ -3,6 +3,7 @@ package org.automation.core;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
@@ -26,7 +27,7 @@ public class Browser {
     private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
     private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
     private static String IEServerPath = "./target/test-classes/drivers/ie32/IEDriverServer.exe";
-    //private static String IEServerPath = "./target/test-classes/drivers/ie86/";
+
 
     public static WebDriver getInstance() {
         if (driver == null) {
@@ -57,6 +58,8 @@ public class Browser {
             }
            // System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
             return new FirefoxDriver();
+        } else if ("edge".equals(nameOfBrowser)) {
+            return new EdgeDriver();
         } else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
