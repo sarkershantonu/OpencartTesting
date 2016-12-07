@@ -25,7 +25,7 @@ public class Browser {
     private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
     private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
     private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
-    private static String IEServerPath = "./drivers/ie32/IEDriverServer.exe";
+    private static String IEServerPath = "./target/test-classes/drivers/ie32/IEDriverServer.exe";
     //private static String IEServerPath = "./target/test-classes/drivers/ie86/";
 
     public static WebDriver getInstance() {
