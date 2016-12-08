@@ -10,6 +10,7 @@ import org.automation.pages.HomePage;
 import org.automation.pages.SearchResultPage;
 import org.automation.utils.ScreenshotUtil;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,11 @@ public class SearchStepDefination {
     @BeforeClass
     public static void init(){
 
+    }
+
+    @AfterClass
+    public static void cleanup(){
+        Browser.close();
     }
 
     @After
