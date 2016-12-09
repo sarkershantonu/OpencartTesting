@@ -18,16 +18,25 @@ public class Browser {
     private static WebDriver driver = null;
     private static String os = System.getProperty("os.name");
 
-    private static String chromeDriverPathWIN = "./target/test-classes/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
-    private static String chromeDriverPathLINUX = "./target/test-classes/drivers/chrome/linux64/chromedriver";
+
     private static String chromePathLINUX="";
     private static String chromePathWIN="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
     private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
     private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+
+
+/*// avoiding target to keep it easy to clean.
     private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
     private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
     private static String IEServerPath = "./target/test-classes/drivers/ie32/IEDriverServer.exe";
-
+    private static String chromeDriverPathWIN = "./target/test-classes/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
+    private static String chromeDriverPathLINUX = "./target/test-classes/drivers/chrome/linux64/chromedriver";
+*/
+    private static String firefoxGekoDriverPathLINUX="./src/test/resources/drivers/firefox/linux64/geckodriver";
+    private static String firefoxGekoDriverPathWIN="./src/test/resources/drivers/firefox/win64/geckodriver.exe";
+    private static String IEServerPath = "./src/test/resources/drivers/ie32/IEDriverServer.exe";
+    private static String chromeDriverPathWIN = "./src/test/resources/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
+    private static String chromeDriverPathLINUX = "./src/test/resources/drivers/chrome/linux64/chromedriver";
 
     public static WebDriver getInstance() {
         if (driver == null) {
