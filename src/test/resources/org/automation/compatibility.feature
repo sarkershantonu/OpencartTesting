@@ -10,5 +10,4 @@ Feature: Compatibility checks
     Then I quit browser
     Examples:
       |browser|
-      |edge|
       |ie|
