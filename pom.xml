@@ -11,9 +11,9 @@
         <resources>
             <resource>
                 <directory>src/test/resources</directory>
-               <!-- <includes>
-                    <include>**.*</include>
-                </includes>-->
+                <!-- <includes>
+                     <include>**.*</include>
+                 </includes>-->
             </resource>
         </resources>
     </build>
@@ -37,6 +37,8 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+        <!--Selenium Start-->
         <dependency>
             <groupId>com.github.detro</groupId>
             <artifactId>phantomjsdriver</artifactId>
@@ -104,4 +106,6 @@
             <version>1.5.2</version>
         </dependency>
     </dependencies>
+
+
 </project>

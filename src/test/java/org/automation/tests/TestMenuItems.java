@@ -9,6 +9,7 @@ import org.automation.core.TestBase;
  */
 public class TestMenuItems extends TestBase {
 
+    //@Severity(SeverityLevel.BLOCKER)
     public void testDesktop(){
         // mouse hover , get all sub items text and assert
         // mouse hover and get the link contains "see all"
@@ -22,4 +23,20 @@ public class TestMenuItems extends TestBase {
     public void testMp3Players(){}
     public void testTablets(){}
     public void testSoftware(){}
+
+    /***
+     @Title("")
+     @Step("")//does not work in multiple lines
+     @Severity(SeverityLevel.BLOCKER)
+     @Issue(value = "")
+     @Description("")
+     @Features(")
+     @Stories({""} )
+     */
+
+    public void Verify_that_PC_subcategory_of_Desktop_navigates_to_PC_list_page(){
+
+    }
+
+
 }
