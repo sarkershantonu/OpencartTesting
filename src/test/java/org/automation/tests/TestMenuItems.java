@@ -7,14 +7,17 @@ import org.automation.core.TestBase;
  */
 public class TestMenuItems extends TestBase {
 
-    public void test_menu_item(){
-
+    public void testDesktop(){
+        // mouse hover , get all sub items text and assert
+        // mouse hover and get the link contains "see all"
+        //CS validation of the pop up menu
     }
 
-    public void test_menu_Links(){
-
-    }
-    public void test_menu_UI(){
-        //CS validation
-    }
+    public void testLaptops_Notebooks(){}
+    public void testCameras(){}
+    public void testComponents(){}
+    public void testPhone_Pdas(){}
+    public void testMp3Players(){}
+    public void testTablets(){}
+    public void testSoftware(){}
 }
