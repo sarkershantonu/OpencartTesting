@@ -39,6 +39,11 @@ public abstract class PageBase{
 
 
     public String getTitle() {
+        try {
+           Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return driver.getTitle();
     }
 }
