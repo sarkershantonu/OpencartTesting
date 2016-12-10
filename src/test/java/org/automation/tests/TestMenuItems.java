@@ -7,8 +7,14 @@ import org.automation.core.TestBase;
  */
 public class TestMenuItems extends TestBase {
 
-    public void test_menu_Desktop(){
+    public void test_menu_item(){
 
     }
 
+    public void test_menu_Links(){
+
+    }
+    public void test_menu_UI(){
+        //CS validation
+    }
 }
