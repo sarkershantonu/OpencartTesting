@@ -6,9 +6,8 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by shantonu on 12/14/16.
  */
-public class FooterArea extends PageBase {
-
-    public FooterArea(WebDriver aDriver) {
+public class TopPannel extends PageBase {
+    public TopPannel(WebDriver aDriver) {
         super(aDriver);
     }
 }
