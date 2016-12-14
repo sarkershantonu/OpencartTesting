@@ -7,8 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.automation.core.Browser;
 import org.automation.pages.HomePage;
-import org.automation.pages.SearchResultPage;
-import org.automation.utils.ScreenshotUtil;
+import org.automation.pages.ResultPage;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -19,7 +18,7 @@ import org.openqa.selenium.WebDriver;
 public class SearchStepDefination {
     private WebDriver driver;
     private HomePage home;
-    private SearchResultPage resultPage;
+    private ResultPage resultPage;
     private long start, end;
 
     @BeforeClass
@@ -74,7 +73,7 @@ public class SearchStepDefination {
         home.search.textBox.clear();
         home.search.textBox.sendKeys(word);
         home.search.button.click();
-        resultPage = new SearchResultPage(driver);
+        resultPage = new ResultPage(driver);
     }
 
 
