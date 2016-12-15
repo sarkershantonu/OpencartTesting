@@ -15,4 +15,5 @@ public class FooterArea extends PageBase {
 
     public WebElement aboutUsLink;
 
+    public WebElement deliveryInfoLink;
 }
