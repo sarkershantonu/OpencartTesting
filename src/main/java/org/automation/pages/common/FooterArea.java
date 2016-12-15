@@ -21,5 +21,6 @@ public class FooterArea extends PageBase {
 
     public WebElement termsAndConditionLink;
     public WebElement contactUsLink;
+    public WebElement returnssLink;
 
 }
