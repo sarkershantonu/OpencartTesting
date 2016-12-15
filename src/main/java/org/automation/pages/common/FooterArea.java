@@ -18,4 +18,7 @@ public class FooterArea extends PageBase {
     public WebElement deliveryInfoLink;
 
     public WebElement privacyPolicyLink;
+
+    public WebElement termsAndConditionLink;
+
 }
