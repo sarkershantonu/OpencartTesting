@@ -24,5 +24,6 @@ public class FooterArea extends PageBase {
     public WebElement returnssLink;
     public WebElement siteMapLink;
     public WebElement brandsLink;
+    public WebElement giftVoucersLink;
 
 }
