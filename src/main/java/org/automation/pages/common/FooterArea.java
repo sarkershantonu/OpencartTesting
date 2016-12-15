@@ -30,5 +30,6 @@ public class FooterArea extends PageBase {
     public WebElement myAccountLink;
     public WebElement OrderHistoryLink;
     public WebElement wishListLink;
+    public WebElement newsLetterLink;
 
 }
