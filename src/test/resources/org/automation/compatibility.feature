@@ -4,11 +4,13 @@ Feature: Compatibility checks
     Given I open <browser> browser
     When I type http://demo.opencart.com/ and press enter
     Then I can see page loaded with title "The OpenCart demo store"
-    And I type "Iphone" in search box And I click search button
-    Then I can see search results with title "Search - Iphone"
-    And I can see the search should not take more than 100 second
+    And I type "<keyword>" in search box And I click search button
+    Then I can see search results with title "Search - <keyword>"
+    And I can see the search should not take more than <time> second
     Then I quit browser
     Examples:
-      |browser|
-      |chrome|
-      |firefox|
+      |browser|keyword|time|
+      |chrome|  Iphone|20  |
+      |firefox|laptop |25  |
+      |chrome|  laptop|15  |
+      |firefox|Iphone |25  |
