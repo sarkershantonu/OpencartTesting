@@ -8,7 +8,12 @@ import org.openqa.selenium.support.How;
 
 /**
  * Created by shantonu on 12/14/16.
- * todo : http://demo.opencart.com/index.php?route=product/product&product_id=40
+ * Contributors will add all items
+ * todo :
+ * See http://demo.opencart.com/index.php?route=product/product&product_id=40
+ * Fillup all findby in all web elements
+ * parse the source and get those links
+ * complete the write a review function.
  */
 public class ProductPage extends PageBase {
     public ProductPage(WebDriver aDriver) {
