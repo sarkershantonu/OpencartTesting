@@ -45,7 +45,7 @@ public class ProductPage extends PageBase {
     }
 
     /**
-     * This will get all links from a loaded page.
+     * This will get all image links from a loaded product which has thumbnail.
      * @return
      * todo
      */
