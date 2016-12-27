@@ -16,4 +16,19 @@ public class ProductPage extends PageBase {
 
     @FindBy(how=How.LINK_TEXT, linkText = "Description")
     public WebElement description_link;
+
+    public WebElement description_body;
+
+    public WebElement review_link;
+
+    public WebElement wishList_link;
+    public WebElement compare_link;
+    public WebElement addToCart_button;
+    public WebElement quantity_textbox;
+
+    public boolean writeAReview(String name, String review, int rating){
+
+        return false;
+    }
+
 }
