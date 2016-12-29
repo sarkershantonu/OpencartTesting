@@ -15,8 +15,8 @@ import org.openqa.selenium.support.How;
  * parse the source and get those links
  * complete the write a review function.
  */
-public class ProductPage extends PageBase {
-    public ProductPage(WebDriver aDriver) {
+public class ProductPage_iphone extends PageBase {
+    public ProductPage_iphone(WebDriver aDriver) {
         super(aDriver);
     }
 
