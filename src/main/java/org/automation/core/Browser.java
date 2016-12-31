@@ -1,5 +1,6 @@
 package org.automation.core;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -159,5 +160,9 @@ public class Browser {
             wait = new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
         }
         return wait;
+    }
+
+    public static JavascriptExecutor getJSexcutor(){
+        return (JavascriptExecutor)driver;
     }
 }
