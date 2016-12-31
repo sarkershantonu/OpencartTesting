@@ -150,4 +150,14 @@ public class Browser {
         cap.setCapability("binary", exeChromium);
         return cap;
     }
+    public static WebDriverWait setWebDriverWait(long sec){
+        WebDriverWait wait ;
+        if(DEFAULT_WAIT_4_ELEMENT<sec){
+            wait =  new WebDriverWait(driver, sec);
+        }else
+        {
+            wait = new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
+        }
+        return wait;
+    }
 }
