@@ -18,6 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Browser {
     private static WebDriver driver = null;
+    public static final long DEFAULT_WAIT_4_PAGE = 30;
+    public static final long DEFAULT_WAIT_4_ELEMENT = 10;
     private static String os = System.getProperty("os.name");
 
 
@@ -44,6 +46,16 @@ public class Browser {
         setImplicitWait(DEFAULT_WAIT_4_PAGE);
         setJSTimeOut(5);
         new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
+    }
+    public static void setJSTimeOut(long sec){
+        driver.manage().timeouts().setScriptTimeout(sec,TimeUnit.SECONDS);
+    }
+    public static void nullifyImplicitWait() {
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    }
+    public static void setImplicitWait(long newWaittime_InSeconds) {
+        nullifyImplicitWait();
+        driver.manage().timeouts().implicitlyWait(newWaittime_InSeconds, TimeUnit.SECONDS);
     }
     public static WebDriver getInstance() {
         if (driver == null) {
