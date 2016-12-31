@@ -59,6 +59,10 @@ public class Browser {
         nullifyImplicitWait();
         driver.manage().timeouts().implicitlyWait(newWaittime_InSeconds, TimeUnit.SECONDS);
     }
+    public static void resetImplicitWait(){
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
     public static WebDriver getInstance() {
         if (driver == null) {
             driver = getABrowser("chrome");
@@ -161,6 +165,7 @@ public class Browser {
         }
         return wait;
     }
+
 
     public static JavascriptExecutor getJSexcutor(){
         return (JavascriptExecutor)driver;
