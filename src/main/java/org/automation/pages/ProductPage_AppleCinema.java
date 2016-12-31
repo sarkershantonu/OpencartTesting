@@ -47,6 +47,7 @@ public class ProductPage_AppleCinema extends PageBase {
 
     public WebElement options_checkboxes;
     //todo other items from right side
+    //Home task
 
     public boolean writeAReview(String name, String review, int rating){
 
