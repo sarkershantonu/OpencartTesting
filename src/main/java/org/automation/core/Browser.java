@@ -41,8 +41,9 @@ public class Browser {
     private static String IEServerPath = "./src/test/resources/drivers/ie64/IEDriverServer.exe";
     private static String chromeDriverPathWIN = "./src/test/resources/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
     private static String chromeDriverPathLINUX = "./src/test/resources/drivers/chrome/linux64/chromedriver";
-    private static void initiDriver(){
 
+
+    private static void initiDriver(){
         setImplicitWait(DEFAULT_WAIT_4_PAGE);
         setJSTimeOut(5);
         new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
