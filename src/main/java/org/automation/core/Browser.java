@@ -9,9 +9,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 
 public class Browser {
@@ -37,7 +39,12 @@ public class Browser {
     private static String IEServerPath = "./src/test/resources/drivers/ie64/IEDriverServer.exe";
     private static String chromeDriverPathWIN = "./src/test/resources/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
     private static String chromeDriverPathLINUX = "./src/test/resources/drivers/chrome/linux64/chromedriver";
+    private static void initiDriver(){
 
+        setImplicitWait(DEFAULT_WAIT_4_PAGE);
+        setJSTimeOut(5);
+        new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
+    }
     public static WebDriver getInstance() {
         if (driver == null) {
             driver = getABrowser("chrome");
@@ -47,6 +54,7 @@ public class Browser {
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
+            initiDriver();
         }
         return driver;
     }
