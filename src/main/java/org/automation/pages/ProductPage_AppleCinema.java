@@ -22,7 +22,7 @@ public class ProductPage_AppleCinema extends PageBase {
 
     @FindBy(how=How.LINK_TEXT, linkText = "Description")
     public WebElement description_link;
-
+    //Here description body
     public WebElement description_body;
 
     public WebElement specification_link;
