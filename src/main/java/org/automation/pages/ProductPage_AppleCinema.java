@@ -22,25 +22,35 @@ public class ProductPage_AppleCinema extends PageBase {
 
     @FindBy(how=How.LINK_TEXT, linkText = "Description")
     public WebElement description_link;
-    //Here description body
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='tab-description']")
     public WebElement description_body;
-
+    @FindBy(how=How.LINK_TEXT, linkText = "Specification")
     public WebElement specification_link;
-
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='tab-specification']/table")
     public WebElement specification_body;//choose item to validate
-
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[1]/ul[2]/li[3]/a")
     public WebElement review_link;
-
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/div[1]/button[1]")
     public WebElement wishList_link;
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/div[1]/button[2]")
     public WebElement compare_link;
+    @FindBy(how=How.LINK_TEXT, linkText = "Apple")
     public WebElement brand_link;
-    public WebElement avaiability_text;
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/ul[1]/li[4]")
+    public WebElement availability_text;
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/ul[1]/li[2]")
     public WebElement productCode_text;
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/h1")
     public WebElement productTitle_text;
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/ul[2]/li[2]/h2")
     public WebElement productPrice;
+    @FindBy(how=How.XPATH, xpath = ".//*[@id='content']/div[1]/div[2]/ul[2]/li[3]")
     public WebElement productTax;
+    @FindBy(how=How.ID, id = "button-cart")
     public WebElement addToCart_button;
+    @FindBy(how=How.ID, id = "input-quantity")
     public WebElement quantity_textbox;
+
     public WebElement continue_review_button;
 
     public WebElement options_radio;
