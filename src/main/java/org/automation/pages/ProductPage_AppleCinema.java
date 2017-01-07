@@ -3,7 +3,9 @@ package org.automation.pages;
 import org.automation.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 
 /**
@@ -15,6 +17,15 @@ import org.openqa.selenium.support.How;
  * parse the source and get those links
  * complete the write a review function.
  */
+
+/**
+ * Fillup all findby in all web elements:done by Jyoti on 6/01/2017
+ * partially complete the write a review function
+ */
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 public class ProductPage_AppleCinema extends PageBase {
     public ProductPage_AppleCinema(WebDriver aDriver) {
         super(aDriver);
@@ -50,7 +61,7 @@ public class ProductPage_AppleCinema extends PageBase {
     public WebElement addToCart_button;
     @FindBy(how=How.ID, id = "input-quantity")
     public WebElement quantity_textbox;
-
+    @FindBy(how=How.ID, id = "button-review")
     public WebElement continue_review_button;
 
     public WebElement options_radio;
@@ -58,10 +69,56 @@ public class ProductPage_AppleCinema extends PageBase {
     public WebElement options_checkboxes;
     //todo other items from right side
 
-    public boolean writeAReview(String name, String review, int rating){
 
+    @FindBy(how =How.ID, id = "input-name")
+    public WebElement your_name;
+    @FindBy(how=How.ID, id = "input-review")
+    public WebElement your_review;
+    @FindAll({
+            @FindBy(how = How.XPATH, xpath = ".//*[@id='tab-review']/form/div[4]/div/input[1]"),
+            @FindBy(how = How.XPATH, xpath = ".//*[@id='tab-review']/form/div[4]/div/input[2]"),
+            @FindBy(how = How.XPATH, xpath = ".//*[@id='tab-review']/form/div[4]/div/input[3]"),
+            @FindBy(how = How.XPATH, xpath = ".//*[@id='tab-review']/form/div[4]/div/input[4]"),
+            @FindBy(how = How.XPATH, xpath = ".//*[@id='tab-review']/form/div[4]/div/input[5]")
+    })
+    public List <WebElement> ratings;
+
+    @FindBy(how=How.ID, id = "input-captcha")
+    public WebElement captcha_input_box;
+    @FindBy(how=How.ID, id = "captcha")
+    public WebElement captcha_image;
+
+    public boolean writeAReview(String name, String review, int rating){
+        typeIntoTextBox(your_name,name );
+        typeIntoTextBox(your_review,review);
+        selectRating(ratings,rating);
+        //todo captcha
+
+        clickContinueButton();
         return false;
     }
+    private void typeIntoTextBox(WebElement element ,String text){
+        element.sendKeys(text);
+    }
+    private void selectRating(List <WebElement> ratings ,int rating){
+        for (WebElement rating_count:ratings) {
+            if (rating_count.equals(rating)){
+                rating_count.click();
+            }
+        }
+
+    }
+
+    private void clickContinueButton(){
+        continue_review_button.click();
+        wait(5);
+    }
+
+    private void wait(int time_unit){
+        driver.manage().timeouts().implicitlyWait(time_unit, TimeUnit.SECONDS);
+    }
+
+
 
     /**
      * This will get all image links from a loaded product which has thumbnail.
