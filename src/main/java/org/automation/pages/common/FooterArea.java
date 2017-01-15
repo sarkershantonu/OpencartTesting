@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * Created by shantonu on 12/14/16.
+ * todo, all element locators
  */
 public class FooterArea extends PageBase {
 
