@@ -12,7 +12,7 @@ import org.openqa.selenium.support.How;
  */
 
 /**
- * Added all element locators
+ * Added all element locators by Jyoti 25/01/2017
  */
 public class FooterArea extends PageBase {
 
