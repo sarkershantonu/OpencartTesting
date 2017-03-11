@@ -30,3 +30,6 @@ I will enrich more scripts so that it is useful to support more typr of angular 
 
 # Project Goal 
 Testing Open cart site
+
+#Notes : 
+Currently, code is out dated 
