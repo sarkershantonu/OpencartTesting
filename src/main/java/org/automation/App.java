@@ -12,8 +12,13 @@ public class App {
         try {
             PropertyLoader.loadProperties("./src/test/driver.properties");
             PropertyLoader.loadProperties("./src/test/test.properties");
+            propertiesBasedOnOS();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void propertiesBasedOnOS(){
+
     }
 }
