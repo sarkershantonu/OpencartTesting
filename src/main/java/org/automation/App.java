@@ -8,7 +8,7 @@ import java.io.IOException;
  * Created by shantonu on 3/13/17.
  */
 public class App {
-    public void initProperties(){
+    public static void initProperties(){
         try {
             PropertyLoader.loadProperties("./src/test/driver.properties");
             PropertyLoader.loadProperties("./src/test/test.properties");

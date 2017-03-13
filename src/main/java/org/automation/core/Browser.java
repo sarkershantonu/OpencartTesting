@@ -1,5 +1,6 @@
 package org.automation.core;
 
+import org.automation.App;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -18,6 +19,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Browser {
+    static {
+        App.initProperties();
+    }
     private static WebDriver driver = null;
     public static final long DEFAULT_WAIT_4_PAGE = 30;
     public static final long DEFAULT_WAIT_4_ELEMENT = 10;
