@@ -1,5 +1,6 @@
 package org.automation;
 
+import org.automation.config.JavaProperties;
 import org.automation.config.PropertyLoader;
 
 import java.io.IOException;
@@ -10,8 +11,8 @@ import java.io.IOException;
 public class App {
     public static void initProperties(){
         try {
-            PropertyLoader.loadProperties("./src/test/driver.properties");
-            PropertyLoader.loadProperties("./src/test/test.properties");
+            PropertyLoader.loadProperties(JavaProperties.USER_WORKING_DIR+"/src/test/resources/driver.properties");
+            //PropertyLoader.loadProperties("./src/test/test.properties");
             propertiesBasedOnOS();
         } catch (IOException e) {
             e.printStackTrace();
@@ -19,7 +20,7 @@ public class App {
     }
 
     private static void propertiesBasedOnOS(){
-        final String os = System.getProperty("os.name");
+        final String os = JavaProperties.OS_NAME;
         if (os.contains("win")) {
             System.setProperty("webdriver.firefox.bin",System.getProperty("firefox.bin.win"));
             System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.win"));
