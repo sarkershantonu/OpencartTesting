@@ -19,6 +19,16 @@ public class App {
     }
 
     private static void propertiesBasedOnOS(){
+        final String os = System.getProperty("os.name");
+        if (os.contains("win")) {
+            System.setProperty("webdriver.firefox.bin",System.getProperty("firefox.bin.win"));
+            System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.win"));
+            System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.win"));
 
+        }else {
+            System.setProperty("webdriver.firefox.bin",System.getProperty("firefox.bin.linux"));
+            System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.linux"));
+            System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.linux"));
+        }
     }
 }

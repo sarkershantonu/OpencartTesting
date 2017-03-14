@@ -83,19 +83,8 @@ public class Browser {
     private Browser() {
     }
     private static WebDriver getABrowser(String nameOfBrowser) {
-       // System.out.println("OS>>>" + os);
+        System.out.println("OS>>>" + os);
         if ("firefox".equals(nameOfBrowser)) {
-            //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
-            if (os.contains("Windows")) {
-                System.setProperty("webdriver.firefox.bin", firefoxPathWIN);
-                //System.setProperty("webdriver.firefox.marionette",firefoxGekoDriverPathWIN);
-                // if not working
-                System.setProperty("webdriver.gecko.driver", firefoxGekoDriverPathWIN);
-            } else {
-                System.setProperty("webdriver.gecko.driver", firefoxGekoDriverPathLINUX);
-                System.setProperty("webdriver.firefox.bin",firefoxPathLINUX);
-            }
-           // System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
             return new FirefoxDriver();
         } else if ("ie".equals(nameOfBrowser)) {
             return new InternetExplorerDriver();
