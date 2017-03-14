@@ -11,6 +11,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.SystemClock;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -90,7 +91,13 @@ public class Browser {
             return new InternetExplorerDriver();
         } else {
             ChromeDriverService service;
-            if (os.contains("Windows")) {
+
+            service = new ChromeDriverService.Builder()
+                    .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
+                    .usingAnyFreePort()
+                    .build();
+
+           /* if (os.contains("Windows")) {
                 System.setProperty("webdriver.chrome.driver", chromeDriverPathWIN);
                 service = new ChromeDriverService.Builder()
                         .usingDriverExecutable(new File(chromeDriverPathWIN))
@@ -102,7 +109,7 @@ public class Browser {
                         .usingDriverExecutable(new File(chromeDriverPathLINUX))
                         .usingAnyFreePort()
                         .build();
-            }
+            }*/
             try {
                 service.start();
             } catch (IOException e) {
@@ -113,18 +120,8 @@ public class Browser {
         }
     }
     private static ChromeOptions getLocalChromeOptions() {
-        String exeChromium = "<path to your chtome or chromium >chrome.exe";
         ChromeOptions options = new ChromeOptions();
-        String driverLocation = null;
-
-        if (os.contains("Windows")) {
-            driverLocation = "<path to chromium driver>chromedriver.exe";//windows path
-        } else {
-            driverLocation = "/usr/bin/google-chrome";//linux path, default, you can change it
-        }
-        System.setProperty("webdriver.chrome.driver", driverLocation);
-        options.setBinary(exeChromium);
-
+        options.setBinary(System.getProperty("webdriver.chrome.bin"));
         return options;
     }
 

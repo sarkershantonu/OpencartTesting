@@ -23,12 +23,15 @@ public class App {
         if (os.contains("win")) {
             System.setProperty("webdriver.firefox.bin",System.getProperty("firefox.bin.win"));
             System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.win"));
+            System.setProperty("webdriver.chrome.bin", System.getProperty("chrome.bin.win"));
             System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.win"));
 
         }else {
             System.setProperty("webdriver.firefox.bin",System.getProperty("firefox.bin.linux"));
             System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.linux"));
+            System.setProperty("webdriver.chrome.bin", System.getProperty("chrome.bin.linux"));
             System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.linux"));
+
         }
     }
 }
