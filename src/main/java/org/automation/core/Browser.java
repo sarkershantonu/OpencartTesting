@@ -43,7 +43,7 @@ public class Browser {
 */
     private static String firefoxGekoDriverPathLINUX="./src/test/resources/drivers/firefox/linux64/geckodriver";
     private static String firefoxGekoDriverPathWIN="./src/test/resources/drivers/firefox/win64/geckodriver.exe";
-    private static String IEServerPath = "./src/test/resources/drivers/ie64/IEDriverServer.exe";
+
     private static String chromeDriverPathWIN = "./src/test/resources/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
     private static String chromeDriverPathLINUX = "./src/test/resources/drivers/chrome/linux64/chromedriver";
 
@@ -97,14 +97,7 @@ public class Browser {
             }
            // System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
             return new FirefoxDriver();
-        } else if ("edge".equals(nameOfBrowser)) {
-            return new EdgeDriver();
-        } else if ("opera".equals(nameOfBrowser)) {
-            return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
-            File iedriver = new File(IEServerPath);//todo for your PC
-            System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
-            //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
         } else {
             ChromeDriverService service;
