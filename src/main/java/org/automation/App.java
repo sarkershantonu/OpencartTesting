@@ -27,6 +27,8 @@ public class App {
             System.setProperty("webdriver.chrome.bin", System.getProperty("chrome.bin.win"));
             System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.win"));
 
+        }else if(os.contains("mac")){
+            // i dont have mac, give me a gift and I will add here :)
         }else {
             System.setProperty("webdriver.firefox.bin",System.getProperty("firefox.bin.linux"));
             System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.linux"));
