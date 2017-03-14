@@ -1,6 +1,7 @@
 package org.automation.core;
 
 import org.automation.App;
+import org.automation.config.JavaProperties;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -23,48 +24,31 @@ public class Browser {
     static {
         App.initProperties();
     }
+
     private static WebDriver driver = null;
     public static final long DEFAULT_WAIT_4_PAGE = 30;
     public static final long DEFAULT_WAIT_4_ELEMENT = 10;
-    private static String os = System.getProperty("os.name");
 
-
-    private static String chromePathLINUX="";
-    private static String chromePathWIN="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
-    private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
-    private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-
-
-/*// avoiding target to keep it easy to clean.
-    private static String firefoxGekoDriverPathLINUX="./target/test-classes/drivers/firefox/linux64/geckodriver";
-    private static String firefoxGekoDriverPathWIN="./target/test-classes/drivers/firefox/win64/geckodriver.exe";
-    private static String IEServerPath = "./target/test-classes/drivers/ie32/IEDriverServer.exe";
-    private static String chromeDriverPathWIN = "./target/test-classes/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
-    private static String chromeDriverPathLINUX = "./target/test-classes/drivers/chrome/linux64/chromedriver";
-*/
-    private static String firefoxGekoDriverPathLINUX="./src/test/resources/drivers/firefox/linux64/geckodriver";
-    private static String firefoxGekoDriverPathWIN="./src/test/resources/drivers/firefox/win64/geckodriver.exe";
-
-    private static String chromeDriverPathWIN = "./src/test/resources/drivers/chrome/win32/chromedriver.exe";// can be changed for your PC
-    private static String chromeDriverPathLINUX = "./src/test/resources/drivers/chrome/linux64/chromedriver";
-
-
-    private static void initiDriver(){
+    private static void initiDriver() {
         setImplicitWait(DEFAULT_WAIT_4_PAGE);
         setJSTimeOut(5);
-        new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
+        new WebDriverWait(driver, DEFAULT_WAIT_4_ELEMENT);
     }
-    public static void setJSTimeOut(long sec){
-        driver.manage().timeouts().setScriptTimeout(sec,TimeUnit.SECONDS);
+
+    public static void setJSTimeOut(long sec) {
+        driver.manage().timeouts().setScriptTimeout(sec, TimeUnit.SECONDS);
     }
+
     public static void nullifyImplicitWait() {
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     }
+
     public static void setImplicitWait(long newWaittime_InSeconds) {
         nullifyImplicitWait();
         driver.manage().timeouts().implicitlyWait(newWaittime_InSeconds, TimeUnit.SECONDS);
     }
-    public static void resetImplicitWait(){
+
+    public static void resetImplicitWait() {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
@@ -74,6 +58,7 @@ public class Browser {
         }
         return driver;
     }
+
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
@@ -81,10 +66,12 @@ public class Browser {
         }
         return driver;
     }
+
     private Browser() {
     }
+
     private static WebDriver getABrowser(String nameOfBrowser) {
-        System.out.println("OS>>>" + os);
+        System.out.println("OS>>>" + JavaProperties.OS_NAME);
         if ("firefox".equals(nameOfBrowser)) {
             return new FirefoxDriver();
         } else if ("ie".equals(nameOfBrowser)) {
@@ -119,6 +106,7 @@ public class Browser {
             return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         }
     }
+
     private static ChromeOptions getLocalChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.setBinary(System.getProperty("webdriver.chrome.bin"));
@@ -132,25 +120,24 @@ public class Browser {
     }
 
     private static DesiredCapabilities getLocalChrome() {
-        String exeChromium = "<path to chromium>chrome.exe";
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("browserName", "chrome");
-        cap.setCapability("binary", exeChromium);
+        cap.setCapability("binary", System.getProperty("webdriver.chrome.bin"));
         return cap;
     }
-    public static WebDriverWait setWebDriverWait(long sec){
-        WebDriverWait wait ;
-        if(DEFAULT_WAIT_4_ELEMENT<sec){
-            wait =  new WebDriverWait(driver, sec);
-        }else
-        {
-            wait = new WebDriverWait(driver,DEFAULT_WAIT_4_ELEMENT);
+
+    public static WebDriverWait setWebDriverWait(long sec) {
+        WebDriverWait wait;
+        if (DEFAULT_WAIT_4_ELEMENT < sec) {
+            wait = new WebDriverWait(driver, sec);
+        } else {
+            wait = new WebDriverWait(driver, DEFAULT_WAIT_4_ELEMENT);
         }
         return wait;
     }
 
 
-    public static JavascriptExecutor getJSexcutor(){
-        return (JavascriptExecutor)driver;
+    public static JavascriptExecutor getJSexcutor() {
+        return (JavascriptExecutor) driver;
     }
 }
