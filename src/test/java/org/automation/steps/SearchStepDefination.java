@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 
 public class SearchStepDefination {
-    private static Logger logger = LoggerFactory.getLogger(SearchStepDefination.class);
+    private static final Logger logger = LoggerFactory.getLogger(SearchStepDefination.class);
     private WebDriver driver;
     private HomePage home;
     private ResultPage resultPage;
