@@ -12,5 +12,3 @@ Feature: Compatibility checks
       |browser|keyword|time|
       |chrome|  Iphone|20  |
       |firefox|laptop |25  |
-      |chrome|  laptop|15  |
-      |firefox|Iphone |25  |
