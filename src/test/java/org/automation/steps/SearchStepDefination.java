@@ -6,20 +6,25 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.automation.core.Browser;
+import org.automation.core.TestLogger;
 import org.automation.pages.HomePage;
 import org.automation.pages.ResultPage;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
+import org.junit.*;
+import org.junit.rules.TestWatcher;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class SearchStepDefination {
+    private static Logger logger = LoggerFactory.getLogger(SearchStepDefination.class);
     private WebDriver driver;
     private HomePage home;
     private ResultPage resultPage;
     private long start, end;
+
+    @Rule
+    public TestWatcher testLogger = new TestLogger(logger);
 
     @BeforeClass
     public static void init(){
