@@ -1,6 +1,8 @@
 package org.automation.core;
 
 import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
+import org.slf4j.Logger;
 
 /**
  * Created by shantonu on 3/15/17.
@@ -8,7 +10,7 @@ import org.junit.rules.TestWatcher;
 public class TestLogger extends TestWatcher {
     private static Logger logger;
 
-    public LoggingRule(Logger logger) {
+    public TestLogger(Logger logger) {
         this.logger = logger;
     }
 
@@ -45,7 +47,7 @@ public class TestLogger extends TestWatcher {
     @Override
     protected void failed(Throwable e, Description description) {
         super.failed(e,description);
-        logger.error("TEST FAILED >>> "+ description.getMethodName() +" and the Test Class ="+description.getClassName()+" , \n ERROR = "+ e.getMessage());
+        logger.error("FAILED > "+ description.getMethodName() +" and the Test Class ="+description.getClassName()+" , \n ERROR = "+ e.getMessage());
     }
 
 }
