@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.automation.core.Browser;
+import org.automation.core.StepBase;
 import org.automation.core.TestLogger;
 import org.automation.pages.HomePage;
 import org.automation.pages.ResultPage;
@@ -16,7 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class SearchStepDefination {
+public class SearchStepDefination extends StepBase {
     private static final Logger logger = LoggerFactory.getLogger(SearchStepDefination.class);
     private WebDriver driver;
     private HomePage home;
@@ -26,20 +27,8 @@ public class SearchStepDefination {
     @Rule
     public TestWatcher testLogger = new TestLogger(logger);
 
-    @BeforeClass
-    public static void init(){
-
-    }
-
-    @AfterClass
-    public static void cleanup(){
-        Browser.close();
-    }
-
     @After
     public void finish(){
-
-        System.out.println("I was called ");
     }
     @Test
     @Given("^I open (.+) browser$")
