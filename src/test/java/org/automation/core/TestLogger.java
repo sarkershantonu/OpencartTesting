@@ -17,7 +17,7 @@ public class TestLogger extends TestWatcher {
     @Override
     protected void starting(Description description) {
         super.starting(description);
-        logger.info("TEST Started : "+ description.getMethodName());
+        logger.info("Started : "+ description.getMethodName());
     }
 
     /**
@@ -26,7 +26,7 @@ public class TestLogger extends TestWatcher {
     @Override
     protected void finished(Description description) {
         super.finished(description);
-        logger.info("TEST COMPLETE : "+ description.getMethodName());
+        logger.info("COMPLETE : "+ description.getMethodName());
     }
 
     /**
@@ -36,8 +36,7 @@ public class TestLogger extends TestWatcher {
     @Override
     protected void succeeded(Description description) {
         super.succeeded(description);
-
-        logger.info("TEST SUCCESS : "+ description.getMethodName());
+        logger.info("SUCCESS : "+ description.getMethodName());
     }
 
     /**
@@ -47,7 +46,7 @@ public class TestLogger extends TestWatcher {
     @Override
     protected void failed(Throwable e, Description description) {
         super.failed(e,description);
-        logger.error("FAILED > "+ description.getMethodName() +" and the Test Class ="+description.getClassName()+" , \n ERROR = "+ e.getMessage());
+        logger.error("FAILED on "+ description.getMethodName() +" \n@"+description.getClassName()+",\nwith ERROR = "+ e.getMessage());
     }
 
 }
