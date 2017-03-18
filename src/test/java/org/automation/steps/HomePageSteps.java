@@ -10,4 +10,11 @@ public class HomePageSteps {
         //The OpenCart demo store © 2017
         return null;
     }
+
+    public void click_About_Us(){
+
+    }
+    public void click_Delivery_Information(){
+
+    }
 }
