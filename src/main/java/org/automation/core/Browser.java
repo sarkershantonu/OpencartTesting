@@ -121,8 +121,6 @@ public class Browser {
         }
         return wait;
     }
-
-
     public static JavascriptExecutor getJSexcutor() {
         return (JavascriptExecutor) driver;
     }
