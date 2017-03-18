@@ -25,20 +25,16 @@ public class SearchStepDefination extends StepBase {
     private long start, end;
 
 
-    @Test
-    public void addingTest(){
-        Assert.assertEquals(true,true);
-    }
     @Rule
     public TestWatcher testLogger = new TestLogger(logger);
 
     @After
-    public void finish(){
+    public void finish() {
     }
 
     @Given("^I open (.+) browser$")
     public void i_open_browser(String nameOfBrowser) throws Throwable {
-       driver = Browser.getInstance(nameOfBrowser);
+        driver = Browser.getInstance(nameOfBrowser);
     }
 
 
@@ -53,21 +49,21 @@ public class SearchStepDefination extends StepBase {
 
     @Then("^I can see page loaded with title \"([^\"]*)\"$")
     public void i_can_see_page_loaded_with_title(String arg1) throws Throwable {
-        Assert.assertEquals(arg1,home.getTitle());
+        Assert.assertEquals(arg1, home.getTitle());
     }
 
     @Then("^I can see invalid search title with \"([^\"]*)\" and message \"([^\"]*)\"$")
     public void i_can_see_invalid_search_title_with_and_message(String arg1, String arg2) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        Assert.assertEquals(arg1,resultPage.getTitle());
+        Assert.assertEquals(arg1, resultPage.getTitle());
         Assert.assertEquals(arg2, resultPage.invalid_search_result_message.getText());
-        end= System.currentTimeMillis();
+        end = System.currentTimeMillis();
     }
 
     @Then("^I can see search results with title \"([^\"]*)\"$")
     public void i_can_see_search_results_with_title(String arg1) throws Throwable {
-        Assert.assertEquals(arg1,resultPage.getTitle());
-        end= System.currentTimeMillis();
+        Assert.assertEquals(arg1, resultPage.getTitle());
+        end = System.currentTimeMillis();
     }
 
     @And("^I type \"([^\"]*)\" in search box And I click search button$")
@@ -80,10 +76,9 @@ public class SearchStepDefination extends StepBase {
     }
 
 
-
     @And("^I can see the search should not take more than (\\d+) second$")
     public void i_can_see_the_search_should_not_take_more_than_second(int arg1) throws Throwable {
-        Assert.assertTrue((end-start)<(arg1*1000));
+        Assert.assertTrue((end - start) < (arg1 * 1000));
     }
 
     @Then("^I quit browser$")
