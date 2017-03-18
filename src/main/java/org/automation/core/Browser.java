@@ -83,20 +83,6 @@ public class Browser {
                     .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
                     .usingAnyFreePort()
                     .build();
-
-           /* if (os.contains("Windows")) {
-                System.setProperty("webdriver.chrome.driver", chromeDriverPathWIN);
-                service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(chromeDriverPathWIN))
-                        .usingAnyFreePort()
-                        .build();
-            } else {
-                System.setProperty("webdriver.chrome.driver", chromeDriverPathLINUX);
-                service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(chromeDriverPathLINUX))
-                        .usingAnyFreePort()
-                        .build();
-            }*/
             try {
                 service.start();
             } catch (IOException e) {
