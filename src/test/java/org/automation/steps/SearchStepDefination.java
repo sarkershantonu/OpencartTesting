@@ -25,9 +25,6 @@ public class SearchStepDefination extends StepBase {
     private long start, end;
 
 
-    @Rule
-    public TestWatcher testLogger = new TestLogger(logger);
-
     @After
     public void finish() {
     }
