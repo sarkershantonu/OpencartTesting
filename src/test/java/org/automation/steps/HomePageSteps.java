@@ -6,10 +6,7 @@ package org.automation.steps;
  */
 public class HomePageSteps {
 
-    public String getCopyRightInfoFromBottom(){
-        //The OpenCart demo store © 2017
-        return null;
-    }
+
 
     public void click_About_Us(){
 
@@ -17,4 +14,5 @@ public class HomePageSteps {
     public void click_Delivery_Information(){
 
     }
+    public void click_Privacy_Policy(){}
 }
