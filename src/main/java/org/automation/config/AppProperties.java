@@ -5,4 +5,7 @@ package org.automation.config;
  */
 public class AppProperties {
     //todo for setting all proerties
+
+    public static final long DEFAULT_WAIT_4_PAGE = 30;
+    public static final long DEFAULT_WAIT_4_ELEMENT = 10;
 }

@@ -1,6 +1,7 @@
 package org.automation.core;
 
 import org.automation.App;
+import org.automation.config.AppProperties;
 import org.automation.config.JavaProperties;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -26,13 +27,12 @@ public class Browser {
     }
 
     private static WebDriver driver = null;
-    public static final long DEFAULT_WAIT_4_PAGE = 30;
-    public static final long DEFAULT_WAIT_4_ELEMENT = 10;
+
 
     private static void initiDriver() {
-        setImplicitWait(DEFAULT_WAIT_4_PAGE);
+        setImplicitWait(AppProperties.DEFAULT_WAIT_4_PAGE);
         setJSTimeOut(5);
-        new WebDriverWait(driver, DEFAULT_WAIT_4_ELEMENT);
+        new WebDriverWait(driver, AppProperties.DEFAULT_WAIT_4_ELEMENT);
     }
 
     public static void setJSTimeOut(long sec) {
@@ -114,10 +114,10 @@ public class Browser {
 
     public static WebDriverWait setWebDriverWait(long sec) {
         WebDriverWait wait;
-        if (DEFAULT_WAIT_4_ELEMENT < sec) {
+        if (AppProperties.DEFAULT_WAIT_4_ELEMENT < sec) {
             wait = new WebDriverWait(driver, sec);
         } else {
-            wait = new WebDriverWait(driver, DEFAULT_WAIT_4_ELEMENT);
+            wait = new WebDriverWait(driver, AppProperties.DEFAULT_WAIT_4_ELEMENT);
         }
         return wait;
     }
