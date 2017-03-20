@@ -36,8 +36,8 @@ public class HomePageSteps {
         return new ContactUs(homePage.driver);
     }
     public PageBase click_Returns (){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.returnsLink.click();
+        return new Returns(homePage.driver);
     }
 
     public PageBase click_SiteMap(){
