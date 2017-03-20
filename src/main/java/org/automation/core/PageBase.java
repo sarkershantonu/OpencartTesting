@@ -1,12 +1,11 @@
 package org.automation.core;
 
+import org.automation.pages.common.FooterArea;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class PageBase{
     private String name;
-
-
     public String getName() {
         return name;
     }
@@ -45,5 +44,8 @@ public abstract class PageBase{
             e.printStackTrace();
         }
         return driver.getTitle();
+    }
+    private void initFooter(){
+        PageFactory.initElements(driver, FooterArea.class);
     }
 }

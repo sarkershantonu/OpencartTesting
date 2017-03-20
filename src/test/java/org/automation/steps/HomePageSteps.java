@@ -65,12 +65,12 @@ public class HomePageSteps {
         return new MyAccount(homePage.driver);
     }
     public PageBase click_Order_History (){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.orderHistoryLink.click();
+        return new OrderHistory(homePage.driver);
     }
     public PageBase click_Wish_List(){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.wishListLink.click();
+        return new WishList(homePage.driver);
     }
     public PageBase click_Newsletter (){
         homePage.footer.privacyPolicyLink.click();
