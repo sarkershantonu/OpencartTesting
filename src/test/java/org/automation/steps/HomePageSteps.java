@@ -49,8 +49,8 @@ public class HomePageSteps {
         return new Brands(homePage.driver);
     }
     public PageBase click_Gift_Vouchers(){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.giftVoucersLink.click();
+        return new GiftVoucers(homePage.driver);
     }
     public PageBase click_Affiliates (){
         homePage.footer.privacyPolicyLink.click();
