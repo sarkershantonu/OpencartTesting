@@ -24,7 +24,7 @@ public abstract class PageBase{
     }
 
     private  String url;
-    protected WebDriver driver;
+    public WebDriver driver;
 
     private PageBase(){
 

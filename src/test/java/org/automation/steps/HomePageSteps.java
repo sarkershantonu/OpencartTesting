@@ -13,6 +13,8 @@ public class HomePageSteps {
     private HomePage homePage;
 
     public PageBase click_About_Us(){
+        homePage.footer.aboutUsLink.click();
+        return new AboutUs(homePage.driver);
 
     }
     public PageBase click_Delivery_Information(){
