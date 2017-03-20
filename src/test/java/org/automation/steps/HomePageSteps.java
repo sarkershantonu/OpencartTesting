@@ -31,6 +31,10 @@ public class HomePageSteps {
         return new TermsAndCondition(homePage.driver);
     }
 
+    public PageBase click_Contact_Us (){
+        homePage.footer.contactUsLink.click();
+        return new ContactUs(homePage.driver);
+    }
     public PageBase click_Returns (){
         homePage.footer.privacyPolicyLink.click();
         return new PrivacyPolicy(homePage.driver);
