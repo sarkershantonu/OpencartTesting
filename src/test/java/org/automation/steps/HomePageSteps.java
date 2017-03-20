@@ -2,6 +2,7 @@ package org.automation.steps;
 
 import org.automation.core.Browser;
 import org.automation.core.PageBase;
+import org.automation.core.StepBase;
 import org.automation.pages.*;
 import org.automation.steps.common.FooterAreaSteps;
 
@@ -9,11 +10,13 @@ import org.automation.steps.common.FooterAreaSteps;
  * Created by shantonu on 5/5/16.
  * this is whole TODo list for home page
  */
-public class HomePageSteps {
+public class HomePageSteps extends StepBase {
 
     private HomePage homePage;
     public FooterAreaSteps footerAreaSteps = new FooterAreaSteps(homePage);
 
+
+    // after testing all bottom methods will be removed
     public PageBase click_About_Us(){
 
         homePage.footer.aboutUsLink.click();
