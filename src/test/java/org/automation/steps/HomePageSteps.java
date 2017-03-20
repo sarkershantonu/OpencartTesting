@@ -41,8 +41,8 @@ public class HomePageSteps {
     }
 
     public PageBase click_SiteMap(){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.siteMapLink.click();
+        return new SiteMap(homePage.driver);
     }
     public PageBase click_Brands(){
         homePage.footer.privacyPolicyLink.click();
