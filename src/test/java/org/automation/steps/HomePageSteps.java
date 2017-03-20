@@ -25,7 +25,7 @@ public class HomePageSteps {
     public void click_Specials (){}
     public void click_My_Account(){}
     public void click_Order_History (){}
-    public void click (){}
+    public void click_Wish_List(){}
     public void click (){}
 
 
