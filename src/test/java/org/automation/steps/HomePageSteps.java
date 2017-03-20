@@ -18,7 +18,7 @@ public class HomePageSteps {
 
     public void click_Returns (){}
 
-
+    public void click_SiteMap(){}
 
 
 }
