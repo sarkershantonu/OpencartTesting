@@ -26,19 +26,52 @@ public class HomePageSteps {
         return new PrivacyPolicy(homePage.driver);
     }
 
-    public PageBase click_Terms_Conditions(){}
+    public PageBase click_Terms_Conditions(){
+        homePage.footer.termsAndConditionLink.click();
+        return new TermsAndCondition(homePage.driver);
+    }
 
-    public PageBase click_Returns (){}
+    public PageBase click_Returns (){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
 
-    public PageBase click_SiteMap(){}
-    public PageBase click_Brands(){}
-    public PageBase click_Gift_Vouchers(){}
-    public PageBase click_Affiliates (){}
-    public PageBase click_Specials (){}
-    public PageBase click_My_Account(){}
-    public PageBase click_Order_History (){}
-    public PageBase click_Wish_List(){}
-    public PageBase click_Newsletter (){}
+    public PageBase click_SiteMap(){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Brands(){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Gift_Vouchers(){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Affiliates (){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Specials (){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_My_Account(){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Order_History (){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Wish_List(){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
+    public PageBase click_Newsletter (){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
 
 
 }
