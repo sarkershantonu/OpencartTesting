@@ -2,7 +2,7 @@ package org.automation.steps;
 
 import org.automation.core.Browser;
 import org.automation.core.PageBase;
-import org.automation.pages.HomePage;
+import org.automation.pages.*;
 
 /**
  * Created by shantonu on 5/5/16.
@@ -18,7 +18,8 @@ public class HomePageSteps {
 
     }
     public PageBase click_Delivery_Information(){
-
+        homePage.footer.deliveryInfoLink.click();
+        return new DeliveryInformation(homePage.driver);
     }
     public PageBase click_Privacy_Policy(){}
 
