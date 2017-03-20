@@ -57,8 +57,8 @@ public class HomePageSteps {
         return new Affiliates(homePage.driver);
     }
     public PageBase click_Specials (){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.specialsLink.click();
+        return new Specials(homePage.driver);
     }
     public PageBase click_My_Account(){
         homePage.footer.privacyPolicyLink.click();
