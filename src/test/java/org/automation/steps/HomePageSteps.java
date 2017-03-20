@@ -73,8 +73,8 @@ public class HomePageSteps {
         return new WishList(homePage.driver);
     }
     public PageBase click_Newsletter (){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.newsLetterLink.click();
+        return new NewsLetter(homePage.driver);
     }
 
 
