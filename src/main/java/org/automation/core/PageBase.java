@@ -24,6 +24,7 @@ public abstract class PageBase{
 
     private  String url;
     public WebDriver driver;
+    public FooterArea footer;
 
     private PageBase(){
 
@@ -31,6 +32,7 @@ public abstract class PageBase{
     public PageBase(WebDriver aDriver){
         this.driver =aDriver;
         initElement(this);
+        //init footer
     }
     public <T extends PageBase> void initElement(T t){
         PageFactory.initElements(driver,t);

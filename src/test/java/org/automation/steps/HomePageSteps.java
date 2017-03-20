@@ -3,6 +3,7 @@ package org.automation.steps;
 import org.automation.core.Browser;
 import org.automation.core.PageBase;
 import org.automation.pages.*;
+import org.automation.steps.common.FooterAreaSteps;
 
 /**
  * Created by shantonu on 5/5/16.
@@ -11,8 +12,10 @@ import org.automation.pages.*;
 public class HomePageSteps {
 
     private HomePage homePage;
+    public FooterAreaSteps footerAreaSteps = new FooterAreaSteps(homePage);
 
     public PageBase click_About_Us(){
+
         homePage.footer.aboutUsLink.click();
         return new AboutUs(homePage.driver);
 
