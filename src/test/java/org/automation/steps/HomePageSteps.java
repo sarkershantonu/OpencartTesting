@@ -23,7 +23,7 @@ public class HomePageSteps {
     public void click_Gift_Vouchers(){}
     public void click_Affiliates (){}
     public void click_Specials (){}
-    public void click (){}
+    public void click_My_Account(){}
     public void click (){}
 
 
