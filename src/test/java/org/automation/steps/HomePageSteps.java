@@ -53,8 +53,8 @@ public class HomePageSteps {
         return new GiftVoucers(homePage.driver);
     }
     public PageBase click_Affiliates (){
-        homePage.footer.privacyPolicyLink.click();
-        return new PrivacyPolicy(homePage.driver);
+        homePage.footer.affiliatesLink.click();
+        return new Affiliates(homePage.driver);
     }
     public PageBase click_Specials (){
         homePage.footer.privacyPolicyLink.click();
