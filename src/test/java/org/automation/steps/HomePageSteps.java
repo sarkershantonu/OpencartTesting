@@ -6,8 +6,6 @@ package org.automation.steps;
  */
 public class HomePageSteps {
 
-
-
     public void click_About_Us(){
 
     }
@@ -15,4 +13,8 @@ public class HomePageSteps {
 
     }
     public void click_Privacy_Policy(){}
+
+    public void click_Terms_Conditions(){}
+
+
 }
