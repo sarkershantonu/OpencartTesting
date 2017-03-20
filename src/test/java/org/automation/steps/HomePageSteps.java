@@ -21,7 +21,10 @@ public class HomePageSteps {
         homePage.footer.deliveryInfoLink.click();
         return new DeliveryInformation(homePage.driver);
     }
-    public PageBase click_Privacy_Policy(){}
+    public PageBase click_Privacy_Policy(){
+        homePage.footer.privacyPolicyLink.click();
+        return new PrivacyPolicy(homePage.driver);
+    }
 
     public PageBase click_Terms_Conditions(){}
 
