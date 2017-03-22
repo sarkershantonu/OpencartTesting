@@ -38,4 +38,6 @@ public class FooterArea extends PageBase {
 
     public WebElement copyright;
 
+    //this
+
 }
