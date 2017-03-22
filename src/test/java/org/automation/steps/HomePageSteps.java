@@ -17,6 +17,7 @@ public class HomePageSteps extends StepBase {
 
 
     // after testing all bottom methods will be removed
+    //getting generics code
     public PageBase click_About_Us(){
 
         homePage.footer.aboutUsLink.click();
