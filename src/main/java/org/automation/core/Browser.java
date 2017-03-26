@@ -75,6 +75,12 @@ public class Browser {
 
         return driver;
     }
+
+    private WebDriver initFirefox(){
+        return driver;
+    }
+
+    private We
     private static WebDriver getABrowser(String nameOfBrowser) {
         System.out.println("OS>>>" + JavaProperties.OS_NAME);
         if ("firefox".equals(nameOfBrowser)) {
