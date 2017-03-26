@@ -88,11 +88,13 @@ public class Browser {
     }
 
     private WebDriver initDefault(){
-
+        final String browserName = System.getProperty("browser.default");
+        driver = getABrowser(browserName);
         return driver;
     }
     private static WebDriver getABrowser(String nameOfBrowser) {
         System.out.println("OS>>>" + JavaProperties.OS_NAME);
+
         if ("firefox".equals(nameOfBrowser)) {
             return new FirefoxDriver();
         } else if ("ie".equals(nameOfBrowser)) {
