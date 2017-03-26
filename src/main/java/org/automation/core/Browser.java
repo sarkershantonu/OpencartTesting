@@ -96,10 +96,14 @@ public class Browser {
         System.out.println("OS>>>" + JavaProperties.OS_NAME);
 
         if ("firefox".equals(nameOfBrowser)) {
-            return new FirefoxDriver();
+            return initFirefox();
         } else if ("ie".equals(nameOfBrowser)) {
-            return new InternetExplorerDriver();
-        } else {
+            return initIE();
+        }
+     else if ("edge".equals(nameOfBrowser)) {
+        return initEdge();
+    }
+        else if ("chrome".equals(nameOfBrowser)){
             ChromeDriverService service;
 
             service = new ChromeDriverService.Builder()
@@ -113,6 +117,8 @@ public class Browser {
             }
             // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
             return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
+        }else{
+            return initDefault();
         }
     }
 
