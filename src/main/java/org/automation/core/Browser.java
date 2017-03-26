@@ -71,23 +71,23 @@ public class Browser {
     }
 
 
-    private WebDriver initChrome(){
+    private static WebDriver initChrome(){
 
         return driver;
     }
 
-    private WebDriver initFirefox(){
+    private static WebDriver initFirefox(){
         return driver;
     }
 
-    private WebDriver initIE(){
+    private static WebDriver initIE(){
         return driver;
     }
-    private WebDriver initEdge(){
+    private static WebDriver initEdge(){
         return driver;
     }
 
-    private WebDriver initDefault(){
+    private static WebDriver initDefault(){
         final String browserName = System.getProperty("browser.default");
         driver = getABrowser(browserName);
         return driver;
