@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by shantonu on 12/10/16.
  */
-public abstract class TestCaseBase {
+public abstract class TestBase {
     protected static WebDriver browser = null;
     @BeforeClass
     public static void initBeforeTest(){
