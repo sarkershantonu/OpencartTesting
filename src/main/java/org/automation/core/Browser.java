@@ -86,6 +86,11 @@ public class Browser {
     private WebDriver initEdge(){
         return driver;
     }
+
+    private WebDriver initDefault(){
+
+        return driver;
+    }
     private static WebDriver getABrowser(String nameOfBrowser) {
         System.out.println("OS>>>" + JavaProperties.OS_NAME);
         if ("firefox".equals(nameOfBrowser)) {
