@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Browser {
     static {
-        App.initProperties();
+        App.initProperties();// loading all properties
     }
 
     private static WebDriver driver = null;
