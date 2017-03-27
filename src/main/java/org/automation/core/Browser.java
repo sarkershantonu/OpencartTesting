@@ -72,7 +72,19 @@ public class Browser {
 
 
     private static WebDriver initChrome(){
+        ChromeDriverService service;
 
+        service = new ChromeDriverService.Builder()
+                .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
+                .usingAnyFreePort()
+                .build();
+        try {
+            service.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
+        driver =  new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         return driver;
     }
 
@@ -102,19 +114,7 @@ public class Browser {
         return initEdge();
     }
         else if ("chrome".equals(nameOfBrowser)){
-            ChromeDriverService service;
-
-            service = new ChromeDriverService.Builder()
-                    .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
-                    .usingAnyFreePort()
-                    .build();
-            try {
-                service.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
-            return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
+           return initChrome();
         }else{
             return initDefault();
         }
