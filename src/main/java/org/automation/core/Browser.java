@@ -88,14 +88,19 @@ public class Browser {
     }
 
     private static WebDriver initFirefox() {
+        driver = new FirefoxDriver();
         return driver;
     }
 
     private static WebDriver initIE() {
+
+        driver=new InternetExplorerDriver();
         return driver;
     }
 
     private static WebDriver initEdge() {
+
+        driver = new EdgeDriver();
         return driver;
     }
 
