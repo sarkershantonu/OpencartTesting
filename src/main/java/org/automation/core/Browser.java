@@ -93,9 +93,7 @@ public class Browser {
         return driver;
     }
     private static WebDriver getABrowser(String nameOfBrowser) {
-        System.out.println("OS>>>" + JavaProperties.OS_NAME);
-
-        if ("firefox".equals(nameOfBrowser)) {
+                if ("firefox".equals(nameOfBrowser)) {
             return initFirefox();
         } else if ("ie".equals(nameOfBrowser)) {
             return initIE();
