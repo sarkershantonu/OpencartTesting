@@ -13,7 +13,8 @@ public class App {
         try {
             PropertyLoader.loadProperties(JavaProperties.USER_WORKING_DIR+"/src/test/resources/driver.properties");
             PropertyLoader.loadProperties(JavaProperties.USER_WORKING_DIR+"/src/test/resources/log4j.properties");
-            //PropertyLoader.loadProperties("./src/test/test.properties");
+            PropertyLoader.loadProperties(JavaProperties.USER_WORKING_DIR+"/src/test/resources/test.properties");
+
             propertiesBasedOnOS();
         } catch (IOException e) {
             e.printStackTrace();

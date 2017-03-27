@@ -71,9 +71,8 @@ public class Browser {
     }
 
 
-    private static WebDriver initChrome(){
+    private static WebDriver initChrome() {
         ChromeDriverService service;
-
         service = new ChromeDriverService.Builder()
                 .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
                 .usingAnyFreePort()
@@ -84,38 +83,38 @@ public class Browser {
             e.printStackTrace();
         }
         // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
-        driver =  new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
+        driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         return driver;
     }
 
-    private static WebDriver initFirefox(){
+    private static WebDriver initFirefox() {
         return driver;
     }
 
-    private static WebDriver initIE(){
-        return driver;
-    }
-    private static WebDriver initEdge(){
+    private static WebDriver initIE() {
         return driver;
     }
 
-    private static WebDriver initDefault(){
+    private static WebDriver initEdge() {
+        return driver;
+    }
+
+    private static WebDriver initDefault() {
         final String browserName = System.getProperty("browser.default");
         driver = getABrowser(browserName);
         return driver;
     }
+
     private static WebDriver getABrowser(String nameOfBrowser) {
-                if ("firefox".equals(nameOfBrowser)) {
+        if ("firefox".equals(nameOfBrowser)) {
             return initFirefox();
         } else if ("ie".equals(nameOfBrowser)) {
             return initIE();
-        }
-     else if ("edge".equals(nameOfBrowser)) {
-        return initEdge();
-    }
-        else if ("chrome".equals(nameOfBrowser)){
-           return initChrome();
-        }else{
+        } else if ("edge".equals(nameOfBrowser)) {
+            return initEdge();
+        } else if ("chrome".equals(nameOfBrowser)) {
+            return initChrome();
+        } else {
             return initDefault();
         }
     }
@@ -148,6 +147,7 @@ public class Browser {
         }
         return wait;
     }
+
     public static JavascriptExecutor getJSexcutor() {
         return (JavascriptExecutor) driver;
     }

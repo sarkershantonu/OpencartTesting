@@ -9,6 +9,7 @@ Feature: Compatibility checks
     And I can see the search should not take more than <time> second
     Then I quit browser
     Examples:
-      |browser|keyword|time|
-      |chrome|  Iphone|20  |
-      |firefox|laptop |25  |
+      | browser | keyword | time |
+      | firefox | laptop  | 25   |
+      | chrome  | Iphone  | 20   |
+
