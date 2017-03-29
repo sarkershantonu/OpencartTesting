@@ -86,7 +86,12 @@ public class Browser {
         driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         return driver;
     }
-
+  private static WebDriver initChrome2() {
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+        driver = new ChromeDriver(capabilities);      
+        return driver;
+    }
     private static WebDriver initFirefox() {
         driver = new FirefoxDriver();
         return driver;
