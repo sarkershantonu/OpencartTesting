@@ -167,12 +167,7 @@ public class Browser {
         driver = null;// to avoid closing time of browser by JVM
     }
 
-    private static DesiredCapabilities getLocalChrome() {
-        DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setCapability("browserName", "chrome");
-        cap.setCapability("binary", System.getProperty("webdriver.chrome.bin"));
-        return cap;
-    }
+
 
     public static WebDriverWait setWebDriverWait(long sec) {
         WebDriverWait wait;
@@ -184,7 +179,7 @@ public class Browser {
         return wait;
     }
 
-    public static JavascriptExecutor getJSexcutor() {
+    public static JavascriptExecutor getJSExcutor() {
         return (JavascriptExecutor) driver;
     }
 }
