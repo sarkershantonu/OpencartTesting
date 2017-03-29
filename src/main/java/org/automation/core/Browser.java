@@ -116,17 +116,39 @@ public class Browser {
         driver.manage().getCookies().clear();
         driver.manage().deleteAllCookies();
     }
-    private static WebDriver getABrowser(String nameOfBrowser) {
-        if ("firefox".equals(nameOfBrowser)) {
-            return initFirefox();
-        } else if ("ie".equals(nameOfBrowser)) {
-            return initIE();
-        } else if ("edge".equals(nameOfBrowser)) {
-            return initEdge();
-        } else if ("chrome".equals(nameOfBrowser)) {
-            return initChrome();
-        } else {
-            return initDefault();
+    
+    public static WebDriver getABrowser(final String browserName){
+        if ("firefox".equals(browserName)) {
+            initFirefox();
+        }
+        else if ("edge".equals(nameOfBrowser)) {
+            initEdge();
+        }
+        else if ("ie".equals(browserName)) {
+            initIE();
+        }
+       else if ("chrome".equals(browserName)) {
+            initChrome();
+        }
+        else {
+            iniDefaultBrowser();
+        }
+        initDriver();
+
+        return driver;
+    }
+
+    private static void iniDefaultBrowser() {
+       final String browserName = System.getProperty("browser.default");
+
+        if ("firefox".equals(browserName)) {
+            initFirefox();
+        }
+        if ("ie".equals(browserName)) {
+            initIE();
+        }
+        if ("chrome".equals(browserName)) {
+            initChrome();
         }
     }
    public static void  initDriver(){
