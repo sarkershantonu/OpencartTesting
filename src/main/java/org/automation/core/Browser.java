@@ -110,11 +110,6 @@ public class Browser {
         return driver;
     }
 
-    private static WebDriver initDefault() {
-        final String browserName = System.getProperty("browser.default");
-        driver = getABrowser(browserName);
-        return driver;
-    }
    private static void cleanCookieCache() {
         driver.manage().getCookies().clear();
         driver.manage().deleteAllCookies();
@@ -137,7 +132,6 @@ public class Browser {
             iniDefaultBrowser();
         }
         initDriver();
-
         return driver;
     }
 
