@@ -129,7 +129,10 @@ public class Browser {
             return initDefault();
         }
     }
-
+   public static void  initDriver(){
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        cleanCookieCache();
+    }
     private static ChromeOptions getLocalChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.setBinary(System.getProperty("webdriver.chrome.bin"));
