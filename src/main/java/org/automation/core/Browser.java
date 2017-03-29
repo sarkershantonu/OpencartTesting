@@ -98,13 +98,11 @@ public class Browser {
     }
 
     private static WebDriver initIE() {
-
         driver=new InternetExplorerDriver();
         return driver;
     }
 
     private static WebDriver initEdge() {
-
         driver = new EdgeDriver();
         return driver;
     }
@@ -114,7 +112,10 @@ public class Browser {
         driver = getABrowser(browserName);
         return driver;
     }
-
+   private static void cleanCookieCache() {
+        driver.manage().getCookies().clear();
+        driver.manage().deleteAllCookies();
+    }
     private static WebDriver getABrowser(String nameOfBrowser) {
         if ("firefox".equals(nameOfBrowser)) {
             return initFirefox();
