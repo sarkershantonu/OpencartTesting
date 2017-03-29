@@ -3,14 +3,17 @@ package org.automation.core;
 import org.automation.App;
 import org.automation.config.AppProperties;
 import org.automation.config.JavaProperties;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.SystemClock;
@@ -89,7 +92,7 @@ public class Browser {
   private static WebDriver initChrome2() {
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-        driver = new ChromeDriver(capabilities);      
+        driver = new ChromeDriver(capabilities);
         return driver;
     }
     private static WebDriver initFirefox() {
@@ -121,7 +124,7 @@ public class Browser {
         if ("firefox".equals(browserName)) {
             initFirefox();
         }
-        else if ("edge".equals(nameOfBrowser)) {
+        else if ("edge".equals(browserName)) {
             initEdge();
         }
         else if ("ie".equals(browserName)) {
