@@ -130,7 +130,10 @@ public class Browser {
         }
     }
    public static void  initDriver(){
+      Integer x=Integer.valueOf(System.getProperty("browser.width"));
+        Integer y=Integer.valueOf(System.getProperty("browser.height"));
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().window().setSize(new Dimension(x, y));
         cleanCookieCache();
     }
     private static ChromeOptions getLocalChromeOptions() {
