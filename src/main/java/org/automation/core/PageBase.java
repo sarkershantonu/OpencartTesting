@@ -2,6 +2,7 @@ package org.automation.core;
 
 import org.automation.pages.common.FooterArea;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class PageBase{
@@ -46,6 +47,11 @@ public abstract class PageBase{
             e.printStackTrace();
         }
         return driver.getTitle();
+    }
+
+    protected WebElement click(WebElement element){
+        element.click();
+        return element;
     }
     private void initFooter(){
         PageFactory.initElements(driver, FooterArea.class);
