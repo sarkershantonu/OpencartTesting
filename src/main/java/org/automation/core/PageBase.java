@@ -53,6 +53,12 @@ public abstract class PageBase{
         element.click();
         return element;
     }
+    protected WebElement type(WebElement element, String text){
+        element.click();
+        element.clear();
+        element.sendKeys(text);
+        return element;
+    }
     private void initFooter(){
         PageFactory.initElements(driver, FooterArea.class);
     }
