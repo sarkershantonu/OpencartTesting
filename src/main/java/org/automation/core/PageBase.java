@@ -61,6 +61,8 @@ public abstract class PageBase{
         return element;
     }
     protected void clickByJS(){
+      String script = "";//todo
+        Browser.getJSExcutor().executeAsyncScript(script);
 
     }
     private void initFooter(){
