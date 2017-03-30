@@ -60,6 +60,9 @@ public abstract class PageBase{
 
         return element;
     }
+    protected void clickByJS(){
+
+    }
     private void initFooter(){
         PageFactory.initElements(driver, FooterArea.class);
     }
