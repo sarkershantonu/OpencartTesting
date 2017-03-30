@@ -57,6 +57,7 @@ public abstract class PageBase{
         element.click();
         element.clear();
         element.sendKeys(text);
+
         return element;
     }
     private void initFooter(){
