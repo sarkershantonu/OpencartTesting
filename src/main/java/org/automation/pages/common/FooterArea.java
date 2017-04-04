@@ -3,6 +3,8 @@ package org.automation.pages.common;
 import org.automation.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shantonu on 12/14/16.
@@ -18,6 +20,8 @@ public class FooterArea extends PageBase {
 
     public WebElement deliveryInfoLink;
 
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=3']")
+    @CacheLookup
     public WebElement privacyPolicyLink;
 
     public WebElement termsAndConditionLink;
