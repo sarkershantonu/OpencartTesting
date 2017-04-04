@@ -14,4 +14,16 @@ public class WebElementUtil {
     @FindBy(css = "a.btn.btn-primary")
     @CacheLookup
     private WebElement continue_btn;
+
+    @FindBy(id = "input-email")
+    @CacheLookup
+    private WebElement emailAddress;
+
+    @FindBy(id = "input-password")
+    @CacheLookup
+    private WebElement password;
+
+    @FindBy(css = "#content div.row div:nth-of-type(2) div.well form div:nth-of-type(2) a")
+    @CacheLookup
+    private WebElement forgottenPassword1;
 }
