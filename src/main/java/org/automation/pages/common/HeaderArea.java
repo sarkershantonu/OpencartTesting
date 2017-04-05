@@ -21,6 +21,8 @@ public class HeaderArea extends PageBase {
     public WebElement giftVoucersLink;
     public WebElement affiliatesLink;
     public WebElement specialsLink;
+    @FindBy(css = ".account-login div:nth-of-type(2) ul.breadcrumb li:nth-of-type(2) a")
+    @CacheLookup
     public WebElement myAccountLink;
     public WebElement OrderHistoryLink;
 
