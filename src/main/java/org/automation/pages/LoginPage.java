@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by shantonu on 4/3/17.
  */
 public class LoginPage extends PageBase {
+    private final String pageUrl = "/index.php?route=account/login";
     public LoginPage(WebDriver aDriver) {
         super(aDriver);
     }
