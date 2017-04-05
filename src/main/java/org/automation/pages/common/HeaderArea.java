@@ -28,6 +28,10 @@ public class HeaderArea extends PageBase {
     public WebElement newsLetterLink;
 
 
+    @FindBy(name = "EUR")
+    @CacheLookup
+    private WebElement euro;
+
     public HeaderArea(WebDriver aDriver) {
         super(aDriver);
     }
