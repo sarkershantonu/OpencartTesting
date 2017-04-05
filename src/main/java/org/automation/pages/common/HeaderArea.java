@@ -32,6 +32,9 @@ public class HeaderArea extends PageBase {
     @CacheLookup
     private WebElement euro;
 
+    @FindBy(css = "button.btn.btn-link.dropdown-toggle")
+    @CacheLookup
+    private WebElement currency;
     public HeaderArea(WebDriver aDriver) {
         super(aDriver);
     }
