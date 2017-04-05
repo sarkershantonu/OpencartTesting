@@ -2,6 +2,9 @@ package org.automation.pages;
 
 import org.automation.core.PageBase;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -17,6 +20,9 @@ public class LoginPage extends PageBase {
         PageFactory.initElements(driver, this);
         return this;
     }
+    @FindBy(id = "input-email")
+    @CacheLookup
+    private WebElement emailAddress;
 
     private void clickLoginButton() {
     }
