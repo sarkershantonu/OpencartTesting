@@ -23,7 +23,9 @@ public class LoginPage extends PageBase {
     @FindBy(id = "input-email")
     @CacheLookup
     private WebElement emailAddress;
-
+    @FindBy(id = "input-password")
+    @CacheLookup
+    private WebElement password;
     private void clickLoginButton() {
     }
     public LoginPage fill() {
