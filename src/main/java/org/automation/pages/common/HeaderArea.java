@@ -19,6 +19,8 @@ public class HeaderArea extends PageBase {
     public WebElement siteMapLink;
     public WebElement brandsLink;
     public WebElement giftVoucersLink;
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=affiliate/account']")
+    @CacheLookup
     public WebElement affiliatesLink;
     public WebElement specialsLink;
     @FindBy(css = ".account-login div:nth-of-type(2) ul.breadcrumb li:nth-of-type(2) a")
