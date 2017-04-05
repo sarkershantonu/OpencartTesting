@@ -27,6 +27,8 @@ public class FooterArea extends PageBase {
     public WebElement privacyPolicyLink;
 
     public WebElement termsAndConditionLink;
+    @FindBy(css = ".account-login footer div.container div.row div:nth-of-type(2) ul.list-unstyled li:nth-of-type(1) a")
+    @CacheLookup
     public WebElement contactUsLink;
     public WebElement returnsLink;
     public WebElement siteMapLink;
