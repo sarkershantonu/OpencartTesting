@@ -3,13 +3,16 @@ package org.automation.pages.common;
 import org.automation.core.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shantonu on 12/14/16.
  * todo => get all the link locators
  */
 public class HeaderArea extends PageBase {
-
+    @FindBy(css = "a[title='Checkout']")
+    @CacheLookup
     public WebElement checkoutLink;
     public WebElement shoppingCartLink;
     public WebElement Link;
