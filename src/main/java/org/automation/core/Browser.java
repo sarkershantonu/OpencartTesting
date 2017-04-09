@@ -90,19 +90,21 @@ public class Browser {
         driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         return driver;
     }
-  private static WebDriver initChrome2() {
+
+    private static WebDriver initChrome2() {
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
         driver = new ChromeDriver(capabilities);
         return driver;
     }
+
     private static WebDriver initFirefox() {
         driver = new FirefoxDriver();
         return driver;
     }
 
     private static WebDriver initIE() {
-        driver=new InternetExplorerDriver();
+        driver = new InternetExplorerDriver();
         return driver;
     }
 
@@ -111,25 +113,21 @@ public class Browser {
         return driver;
     }
 
-   private static void cleanCookieCache() {
+    private static void cleanCookieCache() {
         driver.manage().getCookies().clear();
         driver.manage().deleteAllCookies();
     }
-    
-    public static WebDriver getABrowser(final String browserName){
+
+    public static WebDriver getABrowser(final String browserName) {
         if ("firefox".equals(browserName)) {
             initFirefox();
-        }
-        else if ("edge".equals(browserName)) {
+        } else if ("edge".equals(browserName)) {
             initEdge();
-        }
-        else if ("ie".equals(browserName)) {
+        } else if ("ie".equals(browserName)) {
             initIE();
-        }
-       else if ("chrome".equals(browserName)) {
+        } else if ("chrome".equals(browserName)) {
             initChrome();
-        }
-        else {
+        } else {
             iniDefaultBrowser();
         }
         initDriver();
@@ -137,7 +135,7 @@ public class Browser {
     }
 
     private static void iniDefaultBrowser() {
-       final String browserName = System.getProperty("browser.default");
+        final String browserName = System.getProperty("browser.default");
 
         if ("firefox".equals(browserName)) {
             initFirefox();
@@ -149,13 +147,15 @@ public class Browser {
             initChrome();
         }
     }
-   public static void  initDriver(){
-      Integer x=Integer.valueOf(System.getProperty("browser.width"));
-        Integer y=Integer.valueOf(System.getProperty("browser.height"));
+
+    public static void initDriver() {
+        Integer x = Integer.valueOf(System.getProperty("browser.width"));
+        Integer y = Integer.valueOf(System.getProperty("browser.height"));
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().setSize(new Dimension(x, y));
         cleanCookieCache();
     }
+
     private static ChromeOptions getLocalChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.setBinary(System.getProperty("webdriver.chrome.bin"));
@@ -167,7 +167,6 @@ public class Browser {
         driver.quit();//this is to make process of browser kill
         driver = null;// to avoid closing time of browser by JVM
     }
-
 
 
     public static WebDriverWait setWebDriverWait(long sec) {
