@@ -80,5 +80,7 @@ public class SearchStepDefination extends StepBase {
     @Then("^I quit browser$")
     public void i_quit_browser() throws Throwable {
         Browser.close();
+
+
     }
 }
