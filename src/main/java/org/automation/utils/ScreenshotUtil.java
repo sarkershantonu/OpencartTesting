@@ -41,12 +41,7 @@ public class ScreenshotUtil {
         saveImage(name,type,screenshot);
     }
 
-    /***
-     * This will waiti 500ms to scroll and take full screenshot
-     * This view point, you need to change based on application behavior
-     * @param name
-     * @param aDriver
-     */
+
     public static void takeFullScreen(String name, WebDriver aDriver){
         takeFullScreen(name, aDriver, 500);
     }
