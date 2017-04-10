@@ -28,7 +28,9 @@ public class HeaderArea extends PageBase {
     public WebElement myAccountLink;
     public WebElement OrderHistoryLink;
 
-    public WebElement wishListLink;
+    @FindBy(id = "wishlist-total")
+    @CacheLookup
+    public WebElement wishList0Link;
     public WebElement newsLetterLink;
 
 
