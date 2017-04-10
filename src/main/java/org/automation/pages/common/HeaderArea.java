@@ -11,6 +11,12 @@ import org.openqa.selenium.support.FindBy;
  * todo => get all the link locators
  */
 public class HeaderArea extends PageBase {
+
+
+    @FindBy(css = "#logo a")
+    @CacheLookup
+    private WebElement opencartLogo;
+
     @FindBy(css = "a[title='Checkout']")
     @CacheLookup
     public WebElement checkoutLink;
