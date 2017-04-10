@@ -26,7 +26,8 @@ public class FooterArea extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=3']")
     @CacheLookup
     public WebElement privacyPolicyLink;
-
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=5']")
+    @CacheLookup
     public WebElement termsAndConditionLink;
     @FindBy(css = ".account-login footer div.container div.row div:nth-of-type(2) ul.list-unstyled li:nth-of-type(1) a")
     @CacheLookup
