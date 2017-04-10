@@ -35,13 +35,16 @@ public class HeaderArea extends PageBase {
     @FindBy(css = ".account-login div:nth-of-type(2) ul.breadcrumb li:nth-of-type(2) a")
     @CacheLookup
     public WebElement myAccountLink;
-    public WebElement OrderHistoryLink;
+    public WebElement orderHistoryLink;
 
     @FindBy(id = "wishlist-total")
     @CacheLookup
     public WebElement wishList0Link;
     public WebElement newsLetterLink;
 
+    @FindBy(name = "USD")
+    @CacheLookup
+    private WebElement usd;
 
     @FindBy(name = "EUR")
     @CacheLookup
@@ -50,6 +53,13 @@ public class HeaderArea extends PageBase {
     @FindBy(css = "button.btn.btn-link.dropdown-toggle")
     @CacheLookup
     private WebElement currency;
+
+
+    @FindBy(name = "search")
+    @CacheLookup
+    private WebElement yourShoppingCartIsEmpty;
+
+
     public HeaderArea(WebDriver aDriver) {
         super(aDriver);
     }
