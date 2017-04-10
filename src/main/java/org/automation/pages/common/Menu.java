@@ -18,4 +18,8 @@ public class Menu extends PageBase {
     public Menu(WebDriver aDriver) {
         super(aDriver);
     }
+
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/special']")
+    @CacheLookup
+    private WebElement specials;
 }
