@@ -14,7 +14,10 @@ public class HeaderArea extends PageBase {
     @FindBy(css = "a[title='Checkout']")
     @CacheLookup
     public WebElement checkoutLink;
+    @FindBy(css = "a[title='Shopping Cart']")
+    @CacheLookup
     public WebElement shoppingCartLink;
+
     public WebElement Link;
     public WebElement siteMapLink;
     public WebElement brandsLink;
