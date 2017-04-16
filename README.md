@@ -3,11 +3,14 @@ Detach opencart demo site related testing from automation UI project
 and include multiple QA members to do testing
 
 #Initial Plan :
-Level In Source : 
-1. Common Usages : -> Package Start with Org. -> Utils -> Managers -> 2. Project Specific : -> Package Start with Project. -> Helpers : Project Specific Helpers -> Pages : POM Model 3.
+#Level In Source : 
+1. Common Usages : -> Package Start with Org. -> Utils -> Managers -> 
+2. Project Specific : -> Package Start with Project. -> Helpers : Project Specific Helpers -> Pages : POM Model 3.
 
 Level in Test : 
-1. Test Steps -> Reusable test steps, all are test 2. Workflows (group of test steps preset for testing) 3. Tests, for specific purposes 4. Groupped Tests 5. Tests Suits.
+1. Test Steps -> Reusable test steps, all are test 
+2. Workflows (group of test steps preset for testing) 
+3. Tests, for specific purposes 4. Groupped Tests 5. Tests Suits.
 
 Libs:(gradually Increments) Selenium-java Junit Allure-Junit SL4J AspectJ
 
