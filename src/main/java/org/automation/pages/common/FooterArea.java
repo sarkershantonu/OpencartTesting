@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shantonu on 12/14/16.
- * todo, all element locators
+ * todo, all element locator validation
+ *
  */
 public class FooterArea extends PageBase {
 
