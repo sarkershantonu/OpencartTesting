@@ -58,6 +58,9 @@ public class FooterArea extends PageBase {
     @FindBy(css = "#column-right div.list-group a:nth-of-type(7)")
     @CacheLookup
     public WebElement orderHistoryLink;
+    @FindBy(id = "wishlist-total")
+    @CacheLookup
+
     public WebElement wishListLink;
     @FindBy(css = "#column-right div.list-group a:nth-of-type(12)")
     @CacheLookup
