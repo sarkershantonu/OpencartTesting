@@ -39,6 +39,8 @@ public class FooterArea extends PageBase {
     public WebElement brandsLink;
     public WebElement giftVoucersLink;
 
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=affiliate/account']")
+    @CacheLookup
     public WebElement affiliatesLink;
     public WebElement specialsLink;
 
