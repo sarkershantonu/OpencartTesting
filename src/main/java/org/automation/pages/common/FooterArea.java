@@ -53,6 +53,8 @@ public class FooterArea extends PageBase {
     @CacheLookup
     public WebElement orderHistoryLink;
     public WebElement wishListLink;
+    @FindBy(css = "#column-right div.list-group a:nth-of-type(12)")
+    @CacheLookup
     public WebElement newsLetterLink;
 
     public WebElement copyright;
