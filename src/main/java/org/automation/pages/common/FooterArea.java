@@ -16,6 +16,10 @@ public class FooterArea extends PageBase {
         super(aDriver);
     }
 
+    @FindBy(css = "a[href='http://www.opencart.com']")
+    @CacheLookup
+    private WebElement opencart;
+
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=4']")
     @CacheLookup
     public WebElement aboutUsLink;
