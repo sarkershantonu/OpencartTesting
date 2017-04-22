@@ -54,6 +54,8 @@ public class FooterArea extends PageBase {
     @CacheLookup
     public WebElement specialsLink;
 
+    @FindBy(css = "a[title='My Account']")
+    @CacheLookup
     public WebElement myAccountLink;
     @FindBy(css = "#column-right div.list-group a:nth-of-type(7)")
     @CacheLookup
