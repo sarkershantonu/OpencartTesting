@@ -69,7 +69,5 @@ public abstract class PageBase{
         PageFactory.initElements(driver, FooterArea.class);
     }
 
-    public void validatePageIsLoaded(){
 
-    }
 }

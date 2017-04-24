@@ -7,7 +7,7 @@ import org.automation.core.PageBase;
  */
 public class PageValidator {
 
-    public static boolean validatePageIsLoaded(<? extends PageBase>){
+    public <T extends PageBase>boolean validatePageIsLoaded(T aPage){
         try{
 
 
