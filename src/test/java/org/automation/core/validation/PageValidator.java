@@ -9,7 +9,7 @@ import org.junit.Assert;
  */
 public class PageValidator {
 
-    public <T extends PageBase>boolean validatePageIsLoaded(T aPage, String expectedTitle){
+    public static <T extends PageBase>boolean validatePageIsLoaded(T aPage, String expectedTitle){
         try{
             Assert.assertEquals("Title are not same", expectedTitle, aPage.getTitle());
             return true;
