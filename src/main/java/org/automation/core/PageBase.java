@@ -68,4 +68,8 @@ public abstract class PageBase{
     private void initFooter(){
         PageFactory.initElements(driver, FooterArea.class);
     }
+
+    public void validatePageIsLoaded(){
+
+    }
 }
