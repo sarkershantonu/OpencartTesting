@@ -17,10 +17,6 @@ public class LinkValidator {
         return (getResponseCode(url).intValue()==200)?true:false;
     }
 
-    public boolean isValidLink(URL url) {
-        return false;
-    }
-
     public static Integer getResponseCode(String url) throws IOException {
         //make a http request
 
@@ -52,11 +48,11 @@ public class LinkValidator {
         return response.getStatusLine().getStatusCode();
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         try {
             System.out.println(getResponseCode("https://www.google.com"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }
