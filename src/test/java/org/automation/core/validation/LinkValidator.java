@@ -21,14 +21,10 @@ public class LinkValidator {
         return false;
     }
 
-    /**
-     * This will validate URL by opening the link by apache http client and get back http 200 (or any of successful) message
-     * @param url
-     * @return
-     */
-    public boolean isActiveLink(String url) throws IOException {
+    public boolean isActiveLink(String url_no_http) throws IOException {
         //make a http request
 
+        String USER_AGENT = "";
         String url = "http://www.google.com/search?q=httpClient";
 
         HttpClient client = HttpClientBuilder.create().build();
