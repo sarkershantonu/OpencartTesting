@@ -24,7 +24,7 @@ public class LinkValidator {
     public boolean isActiveLink(String url_no_http) throws IOException {
         //make a http request
 
-        String USER_AGENT = "";
+        String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
         String url = "http://www.google.com/search?q=httpClient";
 
         HttpClient client = HttpClientBuilder.create().build();
