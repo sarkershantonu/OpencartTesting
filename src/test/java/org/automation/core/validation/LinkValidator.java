@@ -14,18 +14,19 @@ import java.net.URL;
  * Created by shantonu on 12/10/16.
  */
 public class LinkValidator {
-    public boolean isValidLink(String url){
-        return false;
-    }
-    public boolean isValidLink(URL url){
+    public boolean isValidLink(String url) {
         return false;
     }
 
-    public static boolean isActiveLink(String url_no_http) throws IOException {
+    public boolean isValidLink(URL url) {
+        return false;
+    }
+
+    public static Integer isActiveLink(String url_no_http) throws IOException {
         //make a http request
 
         String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
-        String url = "http://"+url_no_http;
+        String url = "http://" + url_no_http;
 
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request = new HttpGet(url);
@@ -42,7 +43,7 @@ public class LinkValidator {
         System.out.println("Response Code : "
                 + response.getStatusLine().getStatusCode());
 
-        BufferedReader rd = new BufferedReader(
+        /*BufferedReader rd = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
 
         StringBuffer result = new StringBuffer();
@@ -50,13 +51,13 @@ public class LinkValidator {
         while ((line = rd.readLine()) != null) {
             result.append(line);
         }
-
-        return false;
+*/
+        return response.getStatusLine().getStatusCode();
     }
 
     public static void main(String[] args) {
         try {
-            isActiveLink("www.google.com");
+            System.out.println(isActiveLink("www.google.com"));
         } catch (IOException e) {
             e.printStackTrace();
         }
