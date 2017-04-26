@@ -21,11 +21,11 @@ public class LinkValidator {
         return false;
     }
 
-    public boolean isActiveLink(String url_no_http) throws IOException {
+    public static boolean isActiveLink(String url_no_http) throws IOException {
         //make a http request
 
         String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
-        String url = "http://www.google.com/search?q=httpClient";
+        String url = "http://"+url_no_http;
 
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request = new HttpGet(url);
@@ -52,5 +52,13 @@ public class LinkValidator {
         }
 
         return false;
+    }
+
+    public static void main(String[] args) {
+        try {
+            isActiveLink("www.google.com");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
