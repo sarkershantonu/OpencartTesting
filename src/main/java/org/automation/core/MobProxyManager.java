@@ -12,11 +12,14 @@ public class MobProxyManager {
 
     public static void startProxy(int port){
         BrowserMobProxy proxy_local = new BrowserMobProxyServer();
+        proxy_local.clearBlacklist();
+
         proxy_local.start(port);
+
     }
 
     public static void main(String[] args) {
-        startProxy(9600);
+        startProxy(9600);// use this proxy to see http destinations
 
     }
 

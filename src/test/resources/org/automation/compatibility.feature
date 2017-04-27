@@ -10,7 +10,7 @@ Feature: Compatibility checks
     Then I quit browser
     Examples:
       | browser | keyword    | time |
-      | firefox | laptop     | 25   |
-      | chrome  | Iphone     | 20   |
-      | firefox | xeonServer | 20   |
+      | headless | laptop     | 25   |
+      | headless  | Iphone     | 20   |
+      | headless | xeonServer | 20   |
 

@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 //this is browser manager
@@ -66,7 +68,7 @@ public class Browser {
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
-            initiDriver();
+
         }
         return driver;
     }
@@ -74,6 +76,34 @@ public class Browser {
     private Browser() {
     }
 
+    private static WebDriver initChromeHeadless(){
+        System.out.println("Running Headless");
+        List<String> arguments = new ArrayList<String>();
+        arguments.add("--headless");
+        arguments.add("--remote-debugging-port=9222");
+        arguments.add("--disable-gpu");
+        arguments.add("--https://www.facebook.com");
+        //'--user-data-dir=$home/.headless_ch/userdata'
+        ChromeDriverService service;
+        service = new ChromeDriverService.Builder()
+                .usingDriverExecutable(new File(System.getProperty("webdriver.chrome.driver")))
+                .usingAnyFreePort()
+                .build();
+        try {
+            service.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary(System.getProperty("chrome.headless.linux"));
+        options.addArguments(arguments);
+
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
+        driver = new RemoteWebDriver(service.getUrl(),capabilities);
+        return driver;
+    }
 
     private static WebDriver initChrome() {
         ChromeDriverService service;
@@ -127,10 +157,13 @@ public class Browser {
             initIE();
         } else if ("chrome".equals(browserName)) {
             initChrome();
-        } else {
+        }else if("headless".equals(browserName)){
+            initChromeHeadless();
+        }
+        else {
             iniDefaultBrowser();
         }
-        initDriver();
+       // initDriver();
         return driver;
     }
 
