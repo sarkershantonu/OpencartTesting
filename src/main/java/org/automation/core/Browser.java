@@ -35,11 +35,7 @@ public class Browser {
     private static WebDriver driver = null;
 
 
-    private static void initiDriver() {
-        setImplicitWait(AppProperties.DEFAULT_WAIT_4_PAGE);
-        setJSTimeOut(5);
-        new WebDriverWait(driver, AppProperties.DEFAULT_WAIT_4_ELEMENT);
-    }
+
 
     public static void setJSTimeOut(long sec) {
         driver.manage().timeouts().setScriptTimeout(sec, TimeUnit.SECONDS);
@@ -68,7 +64,7 @@ public class Browser {
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
-
+            initDriver();
         }
         return driver;
     }
@@ -96,7 +92,8 @@ public class Browser {
         }
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         ChromeOptions options = new ChromeOptions();
-        options.setBinary(System.getProperty("chrome.headless.linux"));
+        options.setBinary(System.getProperty("chrome.bin.linux"));
+        //options.setBinary(System.getProperty("chrome.headless.linux"));
         options.addArguments(arguments);
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -180,12 +177,13 @@ public class Browser {
             initChrome();
         }
     }
-
     public static void initDriver() {
         Integer x = Integer.valueOf(System.getProperty("browser.width"));
         Integer y = Integer.valueOf(System.getProperty("browser.height"));
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        setImplicitWait(AppProperties.DEFAULT_WAIT_4_PAGE);
         driver.manage().window().setSize(new Dimension(x, y));
+        setJSTimeOut(5);
+        new WebDriverWait(driver, AppProperties.DEFAULT_WAIT_4_ELEMENT);
         cleanCookieCache();
     }
 
