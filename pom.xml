@@ -40,10 +40,17 @@
         <aspectj.version>1.8.8</aspectj.version>
         <allure.maven.plugin.version>2.5</allure.maven.plugin.version>
         <cucumber.version>1.2.4</cucumber.version>
+        <broser.mob.core>2.1.4</broser.mob.core>
         <testSuit>org.automation.suits.RegressionTests.class</testSuit>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>${broser.mob.core}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
