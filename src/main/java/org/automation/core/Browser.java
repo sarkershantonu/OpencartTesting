@@ -78,7 +78,7 @@ public class Browser {
         arguments.add("--headless");
         arguments.add("--remote-debugging-port=9222");
         arguments.add("--disable-gpu");
-        arguments.add("--https://www.facebook.com");
+        //arguments.add("--https://www.facebook.com");
         //'--user-data-dir=$home/.headless_ch/userdata'
         ChromeDriverService service;
         service = new ChromeDriverService.Builder()
