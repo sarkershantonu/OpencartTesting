@@ -13,6 +13,8 @@ public class ProductPageCommon extends PageBase{
     @FindBy(css = "a[href='#tab-description']")
     @CacheLookup
     public WebElement description_tab;
+    @FindBy(css = "a[href='#tab-review']")
+    @CacheLookup
     public WebElement review_tab;
     public WebElement addToWishList;
 
