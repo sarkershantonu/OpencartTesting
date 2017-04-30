@@ -10,7 +10,8 @@ import org.openqa.selenium.support.FindBy;
  * Created by shantonu on 4/27/17.
  */
 public class ProductPageCommon extends PageBase{
-
+    @FindBy(css = "a[href='#tab-description']")
+    @CacheLookup
     public WebElement description_tab;
     public WebElement review_tab;
     public WebElement addToWishList;
