@@ -16,6 +16,7 @@ public class ProductPageCommon extends PageBase{
     @FindBy(css = "a[href='#tab-review']")
     @CacheLookup
     public WebElement review_tab;
+
     public WebElement addToWishList;
 
     @FindBy(id = "button-cart")
@@ -23,5 +24,9 @@ public class ProductPageCommon extends PageBase{
     private WebElement addToCart;
     public ProductPageCommon(WebDriver aDriver) {
         super(aDriver);
+    }
+
+    public void addItemForCompare(){
+        //its a
     }
 }
