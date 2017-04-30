@@ -27,6 +27,6 @@ public class ProductPageCommon extends PageBase{
     }
 
     public void addItemForCompare(){
-        //its a
+        //its a java script event, so we need to call with product identifier
     }
 }
