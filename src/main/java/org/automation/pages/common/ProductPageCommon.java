@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 public class ProductPageCommon extends PageBase{
 
     public WebElement description_tab;
+    public WebElement review_tab;
 
     public ProductPageCommon(WebDriver aDriver) {
         super(aDriver);
