@@ -11,6 +11,9 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Menu extends PageBase {
 
+    public Menu(WebDriver aDriver) {
+        super(aDriver);
+    }
     @FindBy(css = "")
     @CacheLookup
     private WebElement desktop;
@@ -27,15 +30,14 @@ public class Menu extends PageBase {
     @CacheLookup
     private WebElement software;
 
-    public Menu(WebDriver aDriver) {
-        super(aDriver);
-    }
 
     @FindBy(css = "")
     @CacheLookup
     private WebElement phone_pda;
 
-
+    @FindBy(css = "")
+    @CacheLookup
+    private WebElement cameras;
 
 
 }
