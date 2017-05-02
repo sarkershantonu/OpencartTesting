@@ -39,5 +39,8 @@ public class Menu extends PageBase {
     @CacheLookup
     private WebElement cameras;
 
+    @FindBy(css = "")
+    @CacheLookup
+    private WebElement mp3_players;
 
 }
