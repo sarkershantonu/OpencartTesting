@@ -20,7 +20,9 @@ public class Menu extends PageBase {
     @FindBy(css = "")
     @CacheLookup
     private WebElement components;
-
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
+    @CacheLookup
+    private WebElement tablets;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=17']")
     @CacheLookup
     private WebElement software;
@@ -31,11 +33,9 @@ public class Menu extends PageBase {
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/special']")
     @CacheLookup
-    private WebElement specials;
+    private WebElement phone_pda;
 
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
-    @CacheLookup
-    private WebElement tablets;
+
 
 
 }
