@@ -26,7 +26,7 @@ public class ProductPageCommon extends PageBase{
         super(aDriver);
     }
 
-    public void addItemForCompare(){
+    public void compareThis(){
         //its a java script event, so we need to call with product identifier
     }
 }
