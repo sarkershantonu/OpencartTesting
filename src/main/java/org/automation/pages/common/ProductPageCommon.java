@@ -17,7 +17,9 @@ public class ProductPageCommon extends PageBase{
     @CacheLookup
     public WebElement review_tab;
 
-    public WebElement addToWishList;
+    public void addToWishList(){
+        //its JS even
+    }
 
     @FindBy(id = "button-cart")
     @CacheLookup
