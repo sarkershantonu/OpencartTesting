@@ -11,6 +11,10 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Menu extends PageBase {
 
+    @FindBy(css = "")
+    @CacheLookup
+    private WebElement desktop;
+
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=17']")
     @CacheLookup
     private WebElement software;
@@ -26,4 +30,6 @@ public class Menu extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
     @CacheLookup
     private WebElement tablets;
+
+
 }
