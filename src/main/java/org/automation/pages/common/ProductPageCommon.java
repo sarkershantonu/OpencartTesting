@@ -31,4 +31,7 @@ public class ProductPageCommon extends PageBase{
     public void compareThis(){
         //its a java script event, so we need to call with product identifier
     }
+    public void likeOnFB(){
+
+    }
 }
