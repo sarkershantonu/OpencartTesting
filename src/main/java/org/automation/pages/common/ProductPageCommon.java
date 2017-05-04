@@ -41,4 +41,8 @@ public class ProductPageCommon extends PageBase{
     public void pinit(){
 
     }
+    //we need to special handler with JS
+    public void shareIt(){
+
+    }
 }
