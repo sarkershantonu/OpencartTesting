@@ -34,4 +34,7 @@ public class ProductPageCommon extends PageBase{
     public void likeOnFB(){
 
     }
+    public void tweet(){
+
+    }
 }
