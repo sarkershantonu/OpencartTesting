@@ -40,4 +40,5 @@ public class ProductPreviewPage extends PageBase {
     public ProductPreviewPage(WebDriver aDriver) {
         super(aDriver);
     }
+    public void takeScreenshotOfPage(){}
 }
