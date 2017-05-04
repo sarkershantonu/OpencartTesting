@@ -20,6 +20,9 @@ public class ProductPreviewPage extends PageBase {
 
     }
 
+    public void clickwishlist(){
+
+    }
     @FindBy(xpath = "")
     public WebElement imageOfProduct;
 
