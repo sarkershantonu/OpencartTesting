@@ -16,7 +16,9 @@ public class ProductPreviewPage extends PageBase {
     public WebElement tax;
 
 
-    public WebElement compareProductLinik;
+    public void clickCompareProductLinik(){
+
+    }
 
     @FindBy(xpath = "")
     public WebElement imageOfProduct;
