@@ -37,4 +37,8 @@ public class ProductPageCommon extends PageBase{
     public void tweet(){
 
     }
+
+    public void pinit(){
+
+    }
 }
