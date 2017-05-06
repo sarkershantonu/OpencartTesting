@@ -12,7 +12,7 @@ public class AboutUs extends PageBase {
     public AboutUs(WebDriver aDriver) {
         super(aDriver);
     }
-
+//this represent About us page
     public WebElement description;
     public WebElement title;
 }
