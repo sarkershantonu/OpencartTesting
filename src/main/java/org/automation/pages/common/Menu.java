@@ -14,7 +14,8 @@ public class Menu extends PageBase {
     public Menu(WebDriver aDriver) {
         super(aDriver);
     }
-    @FindBy(linkText = "See All Desktops")
+
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=20']")
     @CacheLookup
     private WebElement desktop;
     @FindBy(css = "")
