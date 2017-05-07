@@ -18,6 +18,11 @@ public class Menu extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=20']")
     @CacheLookup
     private WebElement desktop;
+
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=20_26']")
+    @CacheLookup
+    private WebElement pc;
+
     @FindBy(css = "")
     @CacheLookup
     private WebElement laptop_notebook;
