@@ -41,7 +41,7 @@ public class Menu extends PageBase {
     private WebElement windows;
 
 
-    @FindBy(css = "")
+    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=25")
     @CacheLookup
     private WebElement components;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
