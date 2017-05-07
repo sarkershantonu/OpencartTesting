@@ -14,7 +14,7 @@ public class Menu extends PageBase {
     public Menu(WebDriver aDriver) {
         super(aDriver);
     }
-    @FindBy(css = "")
+    @FindBy(linkText = "See All Desktops")
     @CacheLookup
     private WebElement desktop;
     @FindBy(css = "")
