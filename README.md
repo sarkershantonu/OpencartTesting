@@ -39,3 +39,7 @@ Testing Open cart site
 
 # Notes : 
 Currently, code is out dated 
+
+# Useful Maven comamnds 
+- To test 
+- To Run 
