@@ -18,10 +18,10 @@ Running The tests : Maven Test Run ->Locally ->From Jenkins or any CI (for CLI s
 
 Converted to multiple Maven Project
 
-Common utils
-selenium utils
-project pages + tests
-Contribute
+- Common utils
+- selenium utils
+ - project pages + tests
+ - Contribute
 
 Fork it. Create a branch (git checkout -b myBranch) Commit your changes (git commit -am "Added feature") Push to the branch (git push origin myBranch) Create a new Issue with a link to your branch, or just make a Pull Request.
 
