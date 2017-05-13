@@ -41,5 +41,5 @@ Testing Open cart site
 Currently, code is out dated 
 
 # Useful Maven comamnds 
-- To test 
+- To test : mvn test, mvn verify
 - To Run 
