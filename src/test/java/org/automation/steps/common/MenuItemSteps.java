@@ -9,14 +9,18 @@ import org.automation.pages.common.Menu;
 public class MenuItemSteps extends StepBase {
     private Menu menu;
 
-    private MenuItemSteps(){}
-    public MenuItemSteps(Menu allMenu){
+    private MenuItemSteps() {
+    }
+
+    public MenuItemSteps(Menu allMenu) {
         menu = allMenu;
     }
 
-public void gotoLink(){
+    public void gotoLink() {
+        menu.laptop_notebook.clear();
+        menu.laptop_notebook.click();
 
-}
+    }
 
 
 }
