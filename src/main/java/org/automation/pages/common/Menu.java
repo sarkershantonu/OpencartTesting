@@ -17,50 +17,50 @@ public class Menu extends PageBase {
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=20']")
     @CacheLookup
-    private WebElement desktop;
+    public WebElement desktop;
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=20_26']")
     @CacheLookup
-    private WebElement pc;
+    public WebElement pc;
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=20_27']")
     @CacheLookup
-    private WebElement mac;
+    public WebElement mac;
 
 
     @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18")
     @CacheLookup
-    private WebElement laptop_notebook;
+    public WebElement laptop_notebook;
 
     @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_46")
     @CacheLookup
-    private WebElement macs;
+    public WebElement macs;
 
     @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_45")
     @CacheLookup
-    private WebElement windows;
+    public WebElement windows;
 
     @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=25")
     @CacheLookup
-    private WebElement components;
+    public WebElement components;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
     @CacheLookup
-    private WebElement tablets;
+    public WebElement tablets;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=17']")
     @CacheLookup
-    private WebElement software;
+    public WebElement software;
 
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=24']")
     @CacheLookup
-    private WebElement phone_pda;
+    public WebElement phone_pda;
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=33']")
     @CacheLookup
-    private WebElement cameras;
+    public WebElement cameras;
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=34']")
     @CacheLookup
-    private WebElement mp3_players;
+    public WebElement mp3_players;
 
 }

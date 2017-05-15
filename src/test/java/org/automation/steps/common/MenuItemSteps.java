@@ -14,7 +14,9 @@ public class MenuItemSteps extends StepBase {
         menu = allMenu;
     }
 
+public void gotoLink(){
 
+}
 
 
 }
