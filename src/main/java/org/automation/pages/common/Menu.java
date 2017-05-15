@@ -55,11 +55,11 @@ public class Menu extends PageBase {
     @CacheLookup
     private WebElement phone_pda;
 
-    @FindBy(css = "")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=33']")
     @CacheLookup
     private WebElement cameras;
 
-    @FindBy(css = "")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=24']")
     @CacheLookup
     private WebElement mp3_players;
 
