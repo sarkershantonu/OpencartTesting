@@ -36,7 +36,7 @@ public class Menu extends PageBase {
     @CacheLookup
     public WebElement laptop_notebook_macs;
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18")
+    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_45")
     @CacheLookup
     public WebElement laptop_notebook_windows;
 
