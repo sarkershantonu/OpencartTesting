@@ -6,6 +6,7 @@ import org.automation.pages.common.Menu;
 
 /**
  * Created by shantonu on 4/24/17.
+ * //todo , all menu items
  */
 public class MenuItemSteps extends StepBase {
     private Menu menu;
@@ -22,6 +23,7 @@ public class MenuItemSteps extends StepBase {
     public void goto_laptop_notebook() {
         menu.laptop_notebook.clear();
         menu.laptop_notebook.click();
+
 
     }
 
