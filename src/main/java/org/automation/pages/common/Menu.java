@@ -28,27 +28,27 @@ public class Menu extends PageBase {
     public WebElement mac;
 
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=18']")
     @CacheLookup
     public WebElement laptop_notebook;
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_46")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=18_46']")
     @CacheLookup
     public WebElement laptop_notebook_macs;
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_45")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=18_45']")
     @CacheLookup
     public WebElement laptop_notebook_windows;
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_46")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=18_46']")
     @CacheLookup
     public WebElement macs;
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=18_45")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=18_45']")
     @CacheLookup
     public WebElement windows;
 
-    @FindBy(css = "https://demo.opencart.com/index.php?route=product/category&path=25")
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=25']")
     @CacheLookup
     public WebElement components;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
