@@ -16,7 +16,6 @@ Libs:(gradually Increments) Selenium-java Junit Allure-Junit SL4J AspectJ
 Running The tests : Maven Test Run ->Locally ->From Jenkins or any CI (for CLI support , there will be an entry from Program -> main method) ->With Webdriver Remote Driver execution
 
 Converted to multiple Maven Project
-
 - Common utils
 - selenium utils
  - project pages + tests
