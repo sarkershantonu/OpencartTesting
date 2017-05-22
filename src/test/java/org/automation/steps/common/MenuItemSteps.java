@@ -55,7 +55,13 @@ public class MenuItemSteps extends StepBase {
 
 
     }
+    @Then("")
+    public void goto_components() {
+        menu.components.clear();
+        menu.components.click();
 
+
+    }
 
 
 }
