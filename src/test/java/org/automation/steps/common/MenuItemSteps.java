@@ -69,6 +69,13 @@ public class MenuItemSteps extends StepBase {
 
 
     }
+    @Then("")
+    public void goto_tablets() {
+        menu.tablets.clear();
+        menu.tablets.click();
+
+
+    }
 
 
 }
