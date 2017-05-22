@@ -58,7 +58,6 @@ public class Menu extends PageBase {
     @CacheLookup
     public WebElement software;
 
-
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=24']")
     @CacheLookup
     public WebElement phone_pda;

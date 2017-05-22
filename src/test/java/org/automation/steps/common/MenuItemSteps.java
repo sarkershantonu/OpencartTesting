@@ -23,57 +23,41 @@ public class MenuItemSteps extends StepBase {
     public void goto_laptop_notebook() {
         menu.laptop_notebook.clear();
         menu.laptop_notebook.click();
-
-
     }
     @Then("")
     public void goto_laptop_notebook_macs() {
         menu.laptop_notebook_macs.clear();
         menu.laptop_notebook_macs.click();
-
-
     }
     @Then("")
     public void goto_laptop_notebook_windows() {
         menu.laptop_notebook_windows.clear();
         menu.laptop_notebook_windows.click();
-
-
     }
     @Then("")
     public void goto_mac() {
         menu.mac.clear();
         menu.mac.click();
-
-
     }
     @Then("")
     public void goto_macs() {
         menu.macs.clear();
         menu.macs.click();
-
-
     }
     @Then("")
     public void goto_windows() {
         menu.windows.clear();
         menu.windows.click();
-
-
     }
     @Then("")
     public void goto_components() {
         menu.components.clear();
         menu.components.click();
-
-
     }
     @Then("")
     public void goto_software() {
         menu.software.clear();
         menu.software.click();
-
-
     }
     @Then("")
     public void goto_tablets() {
@@ -85,6 +69,16 @@ public class MenuItemSteps extends StepBase {
         menu.desktop.clear();
         menu.desktop.click();
     }
+    @Then("")
+    public void goto_pc() {
+        menu.pc.clear();
+        menu.pc.click();
+    }
 
+    @Then("")
+    public void goto_phone_pda() {
+        menu.phone_pda.clear();
+        menu.phone_pda.click();
+    }
 
 }
