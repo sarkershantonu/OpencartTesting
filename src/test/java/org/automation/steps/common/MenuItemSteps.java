@@ -48,6 +48,14 @@ public class MenuItemSteps extends StepBase {
 
 
     }
+    @Then("")
+    public void goto_windows() {
+        menu.windows.clear();
+        menu.windows.click();
+
+
+    }
+
 
 
 }
