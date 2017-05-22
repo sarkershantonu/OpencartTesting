@@ -35,10 +35,12 @@ public class MenuItemSteps extends StepBase {
     }
 
     @Then("")
-    public void goto_laptop_notebook_windows() {
-        menu.laptop_notebook_windows.clear();
-        menu.laptop_notebook_windows.click();
+    public void goto_mac() {
+        menu.mac.clear();
+        menu.mac.click();
 
 
     }
+
+
 }
