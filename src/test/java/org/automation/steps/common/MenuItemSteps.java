@@ -87,4 +87,10 @@ public class MenuItemSteps extends StepBase {
         menu.cameras.click();
     }
 
+    @Then("")
+    public void goto_mp3_players() {
+        menu.mp3_players.clear();
+        menu.mp3_players.click();
+    }
+
 }
