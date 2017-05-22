@@ -41,6 +41,13 @@ public class MenuItemSteps extends StepBase {
 
 
     }
+    @Then("")
+    public void goto_macs() {
+        menu.macs.clear();
+        menu.macs.click();
+
+
+    }
 
 
 }
