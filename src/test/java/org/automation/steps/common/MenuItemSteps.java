@@ -81,4 +81,9 @@ public class MenuItemSteps extends StepBase {
         menu.phone_pda.click();
     }
 
+    @Then("")
+    public void goto_cameras() {
+        menu.cameras.clear();
+        menu.cameras.click();
+    }
 }
