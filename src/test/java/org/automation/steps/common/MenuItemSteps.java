@@ -86,4 +86,5 @@ public class MenuItemSteps extends StepBase {
         menu.cameras.clear();
         menu.cameras.click();
     }
+
 }
