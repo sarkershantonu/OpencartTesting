@@ -51,6 +51,11 @@ public class Menu extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=25']")
     @CacheLookup
     public WebElement components;
+
+    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=25']")
+    @CacheLookup
+    public WebElement components_mice_trackballs;
+
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
     @CacheLookup
     public WebElement tablets;
@@ -69,5 +74,4 @@ public class Menu extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=34']")
     @CacheLookup
     public WebElement mp3_players;
-
 }
