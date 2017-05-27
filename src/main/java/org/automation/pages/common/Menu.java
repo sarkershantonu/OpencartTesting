@@ -67,6 +67,7 @@ public class Menu extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=25_31']")
     @CacheLookup
     public WebElement components_scanners;
+
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=25_32']")
     @CacheLookup
     public WebElement components_webCam;
@@ -74,6 +75,7 @@ public class Menu extends PageBase {
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=57']")
     @CacheLookup
     public WebElement tablets;
+
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/category&path=17']")
     @CacheLookup
     public WebElement software;
