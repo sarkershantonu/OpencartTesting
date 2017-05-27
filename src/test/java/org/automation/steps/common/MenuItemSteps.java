@@ -61,6 +61,11 @@ public class MenuItemSteps extends StepBase {
         menu.components.clear();
         menu.components.click();
     }
+    @Then("")
+    public void goto_components_webCam() {
+        menu.components_webCam.clear();
+        menu.components_webCam.click();
+    }
 
     @Then("")
     public void goto_software() {
