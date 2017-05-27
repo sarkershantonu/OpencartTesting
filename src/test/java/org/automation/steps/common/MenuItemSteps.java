@@ -56,13 +56,12 @@ public class MenuItemSteps extends StepBase {
         menu.components_mice_trackballs.click();
     }
 
-
-
     @Then("")
     public void goto_components() {
         menu.components.clear();
         menu.components.click();
     }
+
     @Then("")
     public void goto_software() {
         menu.software.clear();
