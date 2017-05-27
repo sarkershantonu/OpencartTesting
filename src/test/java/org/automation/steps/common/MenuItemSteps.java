@@ -78,6 +78,11 @@ public class MenuItemSteps extends StepBase {
         menu.components_printers.click();
     }
 
+    @Then("")
+    public void goto_components_monitors() {
+        menu.components_monitors.clear();
+        menu.components_monitors.click();
+    }
 
     @Then("")
     public void goto_software() {
