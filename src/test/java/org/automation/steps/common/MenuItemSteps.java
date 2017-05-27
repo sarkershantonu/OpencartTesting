@@ -6,7 +6,7 @@ import org.automation.pages.common.Menu;
 
 /**
  * Created by shantonu on 4/24/17.
- * //todo , all menu items
+ * //all catagory link clicked
  */
 public class MenuItemSteps extends StepBase {
     private Menu menu;
