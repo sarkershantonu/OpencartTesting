@@ -49,6 +49,15 @@ public class MenuItemSteps extends StepBase {
         menu.windows.clear();
         menu.windows.click();
     }
+
+    @Then("")
+    public void goto_components_mice_trackballs() {
+        menu.components_mice_trackballs.clear();
+        menu.components_mice_trackballs.click();
+    }
+
+
+
     @Then("")
     public void goto_components() {
         menu.components.clear();
