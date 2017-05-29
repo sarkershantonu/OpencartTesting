@@ -72,10 +72,5 @@ public class SearchStepDefination extends StepBase {
         Assert.assertTrue((end - start) < (arg1 * 1000));
     }
 
-    @Then("^I quit browser$")
-    public void i_quit_browser() throws Throwable {
-        Browser.close();
 
-
-    }
 }

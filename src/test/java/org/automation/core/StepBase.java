@@ -1,6 +1,7 @@
 package org.automation.core;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +20,10 @@ public abstract class StepBase {
     public void i_open_browser(String nameOfBrowser) throws Throwable {
         driver = Browser.getInstance(nameOfBrowser);
     }
+    @Then("^I quit browser$")
+    public void i_quit_browser() throws Throwable {
+        Browser.close();
 
+    }
 
 }
