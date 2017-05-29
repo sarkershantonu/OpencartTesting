@@ -1,5 +1,6 @@
 package org.automation.core;
 
+import cucumber.api.java.en.Given;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 
@@ -14,5 +15,10 @@ public abstract class StepBase {
     public StepBase(){
 
     }
+    @Given("^I open (.+) browser$")
+    public void i_open_browser(String nameOfBrowser) throws Throwable {
+        driver = Browser.getInstance(nameOfBrowser);
+    }
+
 
 }

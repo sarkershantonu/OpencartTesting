@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 
 public class SearchStepDefination extends StepBase {
     private static final Logger logger = LoggerFactory.getLogger(SearchStepDefination.class);
-    private WebDriver driver;
     private HomePage home;
     private ResultPage resultPage;
     private long start, end;
@@ -29,10 +28,6 @@ public class SearchStepDefination extends StepBase {
     public void finish() {
     }
 
-    @Given("^I open (.+) browser$")
-    public void i_open_browser(String nameOfBrowser) throws Throwable {
-        driver = Browser.getInstance(nameOfBrowser);
-    }
 
 
     @When("^I type (.+) and press enter$")
