@@ -73,4 +73,14 @@ public class SearchStepDefination extends StepBase {
     }
 
 
+    @Given("^I open (.+) browser$")
+    public void i_open_browser(String nameOfBrowser) throws Throwable {
+        driver = Browser.getInstance(nameOfBrowser);
+    }
+    @Then("^I quit browser$")
+    public void i_quit_browser() throws Throwable {
+        Browser.close();
+
+    }
+
 }
