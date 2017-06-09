@@ -41,7 +41,7 @@
         <allure.maven.plugin.version>2.5</allure.maven.plugin.version>
         <cucumber.version>1.2.4</cucumber.version>
         <broser.mob.core>2.1.4</broser.mob.core>
-        <testSuit>org.automation.suits.RegressionTests.class</testSuit>
+        <testSuit>org.automation.suits.CucumberTest.class</testSuit>
     </properties>
 
     <dependencies>
@@ -108,6 +108,5 @@
             <version>1.5.2</version>
         </dependency>
     </dependencies>
-
 
 </project>
