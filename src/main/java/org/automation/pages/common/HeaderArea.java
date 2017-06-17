@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * Created by shantonu on 12/14/16.
  * todo => get all the link locators
  */
 

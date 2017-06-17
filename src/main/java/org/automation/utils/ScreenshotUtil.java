@@ -11,7 +11,6 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Created by shantonu on 8/15/16.
  * this is using Ashot from yandex
  */
 public class ScreenshotUtil {

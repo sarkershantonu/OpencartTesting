@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * Created by shantonu on 12/14/16.
  * Contributors will add all items
  * todo :
  * See http://demo.opencart.com/index.php?route=product/product&product_id=40

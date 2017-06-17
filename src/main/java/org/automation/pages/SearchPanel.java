@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by shantonu on 5/17/16.
  * todo item added for all locators
  */
 

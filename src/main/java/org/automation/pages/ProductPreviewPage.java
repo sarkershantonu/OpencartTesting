@@ -3,9 +3,7 @@ package org.automation.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-/**
- * Created by shantonu on 12/14/16.
- */
+
 // this will be on the fly item creation.. so all item will be dynamic.. need to make a dom parser.
 
 /**

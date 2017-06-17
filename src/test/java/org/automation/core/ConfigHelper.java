@@ -2,9 +2,7 @@ package org.automation.core;
 
 import java.text.SimpleDateFormat;
 
-/**
- * Created by shantonu on 4/19/16.
- */
+
 public class ConfigHelper {
     public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public static final SimpleDateFormat timeFormat = new SimpleDateFormat("kmmss");

@@ -2,9 +2,7 @@ package org.automation.core.validation;
 
 import java.net.URL;
 
-/**
- * Created by shantonu on 12/10/16.
- */
+
 public class LinkValidator {
     public boolean isValidLink(String url){
         return false;

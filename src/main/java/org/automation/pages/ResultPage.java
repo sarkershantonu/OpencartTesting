@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-/**
- * Created by shantonu on 6/4/16.
- */
+
 public class ResultPage extends PageBase implements CompletePage {
     public ResultPage(WebDriver aDriver) {
         super(aDriver);
