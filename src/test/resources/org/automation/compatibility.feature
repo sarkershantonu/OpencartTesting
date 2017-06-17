@@ -9,8 +9,8 @@ Feature: Compatibility checks
     And I can see the search should not take more than <time> second
     Then I quit browser
     Examples:
-      |browser|keyword|time|
-      |chrome|  Iphone|20  |
-      |firefox|laptop |25  |
-      |chrome|  laptop|15  |
-      |firefox|Iphone |25  |
+      | browser | keyword    | time |
+      | headless | laptop     | 25   |
+      | headless  | Iphone     | 20   |
+      | headless | xeonServer | 20   |
+

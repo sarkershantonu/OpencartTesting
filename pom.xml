@@ -12,9 +12,6 @@
         <resources>
             <resource>
                 <directory>src/test/resources</directory>
-                <!-- <includes>
-                     <include>**.*</include>
-                 </includes>-->
             </resource>
         </resources>
         <plugins>
@@ -27,11 +24,12 @@
                         ${testSuit}
                     </includes>
                 </configuration>
-                </plugin>
+            </plugin>
         </plugins>
     </build>
 
     <properties>
+        <slf4j.version>1.7.24</slf4j.version>
         <activiti.version>5.19.0.1</activiti.version>
         <selenium.version>3.0.1</selenium.version>
         <appium.version>3.4.1</appium.version>
@@ -42,10 +40,17 @@
         <aspectj.version>1.8.8</aspectj.version>
         <allure.maven.plugin.version>2.5</allure.maven.plugin.version>
         <cucumber.version>1.2.4</cucumber.version>
-        <testSuit>org.automation.suits.RegressionTests.class</testSuit>
+        <broser.mob.core>2.1.4</broser.mob.core>
+        <testSuit>org.automation.suits.CucumberTest.class</testSuit>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>${broser.mob.core}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -53,11 +58,7 @@
         </dependency>
 
         <!--Selenium Start-->
-        <dependency>
-            <groupId>com.github.detro</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.2.0</version>
-        </dependency>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
@@ -91,19 +92,6 @@
             <artifactId>selenium-edge-driver</artifactId>
             <version>${selenium.version}</version>
         </dependency>
-
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.21</version>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -120,6 +108,5 @@
             <version>1.5.2</version>
         </dependency>
     </dependencies>
-
 
 </project>

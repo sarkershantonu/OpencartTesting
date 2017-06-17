@@ -1,12 +1,12 @@
 package org.automation.core;
 
+import org.automation.pages.common.FooterArea;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class PageBase{
     private String name;
-
-
     public String getName() {
         return name;
     }
@@ -24,7 +24,8 @@ public abstract class PageBase{
     }
 
     private  String url;
-    protected WebDriver driver;
+    public WebDriver driver;
+    public FooterArea footer;
 
     private PageBase(){
 
@@ -32,6 +33,7 @@ public abstract class PageBase{
     public PageBase(WebDriver aDriver){
         this.driver =aDriver;
         initElement(this);
+        //init footer
     }
     public <T extends PageBase> void initElement(T t){
         PageFactory.initElements(driver,t);
@@ -46,4 +48,26 @@ public abstract class PageBase{
         }
         return driver.getTitle();
     }
+
+    protected WebElement click(WebElement element){
+        element.click();
+        return element;
+    }
+    protected WebElement type(WebElement element, String text){
+        element.click();
+        element.clear();
+        element.sendKeys(text);
+
+        return element;
+    }
+    protected void clickByJS(){
+      String script = "";//todo
+        Browser.getJSExcutor().executeAsyncScript(script);
+
+    }
+    private void initFooter(){
+        PageFactory.initElements(driver, FooterArea.class);
+    }
+
+
 }
