@@ -3,10 +3,13 @@ Detach opencart demo site related testing from automation UI project
 and include multiple QA members to do testing
 
 # Level In Source : 
+
 1. Common Usages : -> Package Start with Org. -> Utils -> Managers -> 
+
 2. Project Specific : -> Package Start with Project. -> Helpers : Project Specific Helpers -> Pages : POM Model 3.
 
 # Level in Test : 
+
 1. Test Steps -> Reusable test steps, all are test 
 2. Workflows (group of test steps preset for testing) 
 3. Tests, for specific purposes 4. Groupped Tests 5. Tests Suits.
@@ -26,9 +29,11 @@ Fork it. Create a branch (git checkout -b myBranch) Commit your changes (git com
 I will enrich more scripts so that it is useful to support more typr of angular apps
 
 # Project structure 
- -Single Module Maven Project to minimize complexity 
- -Cucumber intregration (optional, open for discussion)
- -Allure Integration (optional, open for discussion)
+ - Single Module Maven Project to minimize complexity 
+ 
+ - Cucumber intregration (optional, open for discussion)
+ 
+ - Allure Integration (optional, open for discussion)
 
 # Project Goal 
 Testing Open cart site
