@@ -43,7 +43,9 @@ Testing Open cart site
 
 # Notes : 
 Currently, code is out dated 
-
+# Dependencies 
+ - Selenium 
+ - Webdriver Manager
 # Useful Maven comamnds 
 - To test : mvn test, mvn verify
 - To Run 
