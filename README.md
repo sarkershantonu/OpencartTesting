@@ -38,8 +38,8 @@ I will enrich more scripts so that it is useful to support more typr of angular 
 # Project Goal 
 Testing Open cart site
 
-# DB reqired
-
+# Driver 
+Dwnload driver and put in driver folder (which will be used in property) 
 
 # Notes : 
 Currently, code is out dated 
