@@ -5,4 +5,5 @@
 *.project
 target
 .settings
-/drivers
+drivers/
+reports/
