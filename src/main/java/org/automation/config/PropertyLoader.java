@@ -22,7 +22,7 @@ public class PropertyLoader {
             PropertyLoader.loadProperties("./properties/cucumber.properties");
             PropertyLoader.loadProperties("./properties/log4j.properties");
             PropertyLoader.loadProperties("./properties/test.properties");
-            propertiesBasedOnOS();
+          //  propertiesBasedOnOS();
         } catch (IOException e) {
             e.printStackTrace();
         }
