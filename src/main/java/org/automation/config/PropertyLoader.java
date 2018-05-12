@@ -18,7 +18,8 @@ public class PropertyLoader {
     }
     public static void initProperties(){
         try {
-            PropertyLoader.loadProperties("./properties/driver.properties");
+            PropertyLoader.loadProperties("./properties/webdriver.properties");
+            PropertyLoader.loadProperties("./properties/cucumber.properties");
             PropertyLoader.loadProperties("./properties/log4j.properties");
             PropertyLoader.loadProperties("./properties/test.properties");
             propertiesBasedOnOS();
