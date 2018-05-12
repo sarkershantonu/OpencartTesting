@@ -28,14 +28,8 @@ import java.util.concurrent.TimeUnit;
 //this is browser manager
 
 public class Browser {
-    static {
-        App.initProperties();// loading all properties
-    }
 
     private static WebDriver driver = null;
-
-
-
 
     public static void setJSTimeOut(long sec) {
         driver.manage().timeouts().setScriptTimeout(sec, TimeUnit.SECONDS);
@@ -72,7 +66,7 @@ public class Browser {
     private Browser() {
     }
 
-    private static WebDriver initChromeHeadless(){
+    private static WebDriver initChromeHeadless() {
         System.out.println("Running Headless");
         List<String> arguments = new ArrayList<String>();
         arguments.add("--headless");
@@ -98,7 +92,7 @@ public class Browser {
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
-        driver = new RemoteWebDriver(service.getUrl(),capabilities);
+        driver = new RemoteWebDriver(service.getUrl(), capabilities);
         return driver;
     }
 
@@ -154,13 +148,12 @@ public class Browser {
             initIE();
         } else if ("chrome".equals(browserName)) {
             initChrome();
-        }else if("headless".equals(browserName)){
+        } else if ("headless".equals(browserName)) {
             initChromeHeadless();
-        }
-        else {
+        } else {
             iniDefaultBrowser();
         }
-       // initDriver();
+        // initDriver();
         return driver;
     }
 
@@ -177,6 +170,7 @@ public class Browser {
             initChrome();
         }
     }
+
     public static void initDriver() {
         Integer x = Integer.valueOf(System.getProperty("browser.width"));
         Integer y = Integer.valueOf(System.getProperty("browser.height"));
