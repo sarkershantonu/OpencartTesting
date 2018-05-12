@@ -12,6 +12,8 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
+            </resource>
+            <resource>
                 <directory>src/test/resources</directory>
             </resource>
         </resources>
@@ -40,7 +42,7 @@
     </build>
 
     <properties>
-        <slf4j.version>1.7.24</slf4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
         <activiti.version>5.19.0.1</activiti.version>
         <selenium.version>3.0.1</selenium.version>
         <appium.version>3.4.1</appium.version>
@@ -56,6 +58,11 @@
     </properties>
 
     <dependencies>
+         <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-simple</artifactId>
+             <version>${slf4j.version}</version>
+         </dependency>
         <dependency>
             <groupId>net.lightbody.bmp</groupId>
             <artifactId>browsermob-core</artifactId>

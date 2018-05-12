@@ -54,6 +54,7 @@ public class SearchStepDefination extends StepBase {
 
     @Then("^I can see search results with title \"([^\"]*)\"$")
     public void i_can_see_search_results_with_title(String arg1) throws Throwable {
+        logger.info("Comparing the assert");
         Assert.assertEquals(arg1, resultPage.getTitle());
         end = System.currentTimeMillis();
     }
@@ -69,6 +70,7 @@ public class SearchStepDefination extends StepBase {
 
     @And("^I can see the search should not take more than (\\d+) second$")
     public void i_can_see_the_search_should_not_take_more_than_second(int arg1) throws Throwable {
+
         Assert.assertTrue((end - start) < (arg1 * 1000));
     }
 
