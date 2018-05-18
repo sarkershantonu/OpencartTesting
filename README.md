@@ -49,3 +49,8 @@ Currently, code is out dated
 # Useful Maven comamnds 
 - To test : mvn test, mvn verify
 - To Run 
+
+# Report : 
+1. Allure report
+2. Maven failsafe 
+3. Cucumber 
