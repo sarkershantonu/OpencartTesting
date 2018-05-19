@@ -54,3 +54,7 @@ Currently, code is out dated
 1. Allure report
 2. Maven failsafe 
 3. Cucumber 
+
+# Report Note 
+-create a folder for reports in project root (src lavel)  
+
