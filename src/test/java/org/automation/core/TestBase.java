@@ -17,7 +17,7 @@ public abstract class TestBase {
     }
     @AfterClass
     public static void cleanupTest(){
-
+        browser.quit();
     }
 
     public TestBase(){
