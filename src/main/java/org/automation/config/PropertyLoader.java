@@ -1,5 +1,7 @@
 package org.automation.config;
 
+import org.openqa.selenium.Platform;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -23,41 +25,24 @@ public class PropertyLoader {
             // loadProperties("./properties/webdriver.properties");
             loadProperties("./properties/cucumber.properties");
             if ("local".equals(System.getProperty("test.execution"))) {
-                loadProperties("./properties/webdriver.local.properties");
+                if(JavaProperties.OS_NAME.contains("Windows")){
+                    loadProperties("./properties/webdriver.win.properties");
+                }else if(JavaProperties.OS_NAME.contains("mac")){
+                    loadProperties("./properties/webdriver.mac.properties");
+                }else if(JavaProperties.OS_NAME.contains("linux")){
+                    loadProperties("./properties/webdriver.linux.properties");
+                }else {
+                    throw new RuntimeException("NO SUITABLE OS");
+                }
+
             } else if ("remote".equals(System.getProperty("test.execution"))) {
                 loadProperties("./properties/webdriver.remote.properties");
             } else {
                 System.out.println("Execution Property(test.execution) not added @ test.properties = ");
             }
-             propertiesBasedOnOS();
+
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-
-    private static void propertiesBasedOnOS() {
-        final String os = JavaProperties.OS_NAME;
-        if (os.contains("Windows")) {
-            System.setProperty("webdriver.firefox.bin", System.getProperty("firefox.bin.win"));
-            System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.win"));
-            System.setProperty("webdriver.chrome.bin", System.getProperty("chrome.bin.win"));
-            System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.win"));
-            System.setProperty("webdriver.ie.driver", System.getProperty("ie.driver.win"));
-
-        } else if (os.contains("mac")) {
-            System.setProperty("webdriver.firefox.bin", System.getProperty("firefox.bin.mac"));
-            System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.mac"));
-            System.setProperty("webdriver.chrome.bin", System.getProperty("chrome.bin.mac"));
-            System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.mac"));
-        } else if (os.contains("linux")) {
-            System.setProperty("webdriver.firefox.bin", System.getProperty("firefox.bin.linux"));
-            System.setProperty("webdriver.gecko.driver", System.getProperty("firefox.driver.linux"));
-            System.setProperty("webdriver.chrome.bin", System.getProperty("chrome.bin.linux"));
-            System.setProperty("webdriver.chrome.driver", System.getProperty("chrome.driver.linux"));
-
-        } else {
-          throw new RuntimeException("OS is not Listed");
         }
     }
 }

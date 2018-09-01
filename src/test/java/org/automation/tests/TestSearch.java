@@ -1,5 +1,6 @@
 package org.automation.tests;
 
+import org.automation.config.JavaProperties;
 import org.automation.config.PropertyLoader;
 import org.automation.core.Browser;
 import org.automation.core.TestBase;
@@ -18,7 +19,8 @@ public class TestSearch  {
     }
     @Before
     public void init(){
-        browser = Browser.getInstance();
+        System.out.println(JavaProperties.OS_NAME);
+        browser = Browser.getABrowser("firefox");
     }
     @After
     public void cleanupTest(){
@@ -29,5 +31,6 @@ public class TestSearch  {
     public void testChromeExit(){
         browser.get("https://shantonusarker.blogspot.com");
         Assert.assertEquals("A Test Developer's blog",browser.getTitle());
+
     }
 }
