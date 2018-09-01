@@ -50,18 +50,11 @@ public class Browser {
 
     public static WebDriver getInstance() {
         if (driver == null) {
-            driver = getABrowser("chrome");
+            iniDefaultBrowser();
         }
         return driver;
     }
 
-    public static WebDriver getInstance(String browserName) {
-        if (driver == null) {
-            driver = getABrowser(browserName);
-            initDriver();
-        }
-        return driver;
-    }
 
     private Browser() {
     }
@@ -120,11 +113,15 @@ public class Browser {
     }
 
     private static WebDriver initFirefox() {
-        driver = new FirefoxDriver();
+        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+
+        driver = new FirefoxDriver(capabilities);
         return driver;
     }
 
     private static WebDriver initIE() {
+
         driver = new InternetExplorerDriver();
         return driver;
     }
@@ -176,6 +173,7 @@ public class Browser {
         Integer y = Integer.valueOf(System.getProperty("browser.height"));
         setImplicitWait(AppProperties.DEFAULT_WAIT_4_PAGE);
         driver.manage().window().setSize(new Dimension(x, y));
+        setImplicitWait(30);
         setJSTimeOut(5);
         new WebDriverWait(driver, AppProperties.DEFAULT_WAIT_4_ELEMENT);
         cleanCookieCache();
