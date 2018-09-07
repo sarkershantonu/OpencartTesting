@@ -1,8 +1,6 @@
 package org.automation.core;
 
-import org.automation.App;
 import org.automation.config.AppProperties;
-import org.automation.config.JavaProperties;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,11 +10,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.SystemClock;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -50,7 +46,7 @@ public class Browser {
 
     public static WebDriver getInstance() {
         if (driver == null) {
-            iniDefaultBrowser();
+            getDefaultBrowser();
         }
         return driver;
     }
@@ -148,24 +144,14 @@ public class Browser {
         } else if ("headless".equals(browserName)) {
             initChromeHeadless();
         } else {
-            iniDefaultBrowser();
+            throw  new RuntimeException("No Valid Browser Found");
         }
         // initDriver();
         return driver;
     }
 
-    private static void iniDefaultBrowser() {
-        final String browserName = System.getProperty("browser.default");
-
-        if ("firefox".equals(browserName)) {
-            initFirefox();
-        }
-        if ("ie".equals(browserName)) {
-            initIE();
-        }
-        if ("chrome".equals(browserName)) {
-            initChrome();
-        }
+    private static WebDriver getDefaultBrowser() {
+        return getABrowser(System.getProperty("browser.default"));
     }
 
     public static void initDriver() {
