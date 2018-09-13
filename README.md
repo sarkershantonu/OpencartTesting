@@ -72,4 +72,5 @@ Currently, code is out dated
 1. Yandex Element 
 2. Selenide
 3. Local Remote Driver
+4. Test Case in Allure
 
