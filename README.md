@@ -2,6 +2,9 @@
 Detach opencart demo site related testing from automation UI project
 and include multiple QA members to do testing
 
+# Install Opencart in your local Ubuntu (optional)
+- https://github.com/sarkershantonu/hardware/tree/master/install-scripts/opencart
+
 # Agile Board 
 https://trello.com/b/MVdb3O1a/weekend-project-automation-ui-selenium
 
