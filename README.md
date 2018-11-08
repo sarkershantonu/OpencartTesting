@@ -2,6 +2,10 @@
 Detach opencart demo site related testing from automation UI project
 and include multiple QA members to do testing
 
+# Test APP 
+demo.opencart.com
+
+
 # Install Opencart in your local Ubuntu (optional)
 - https://github.com/sarkershantonu/hardware/tree/master/install-scripts/opencart
 
