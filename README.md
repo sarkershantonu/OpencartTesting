@@ -80,5 +80,6 @@ Currently, code is out dated
 2. Selenide
 3. Local Remote Driver
 4. Test Case in Allure
+5. Jenkins test jobs
 
 # Knowledge
