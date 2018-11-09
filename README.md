@@ -65,7 +65,7 @@ Currently, code is out dated
 - To Run 
 
 # Report : 
-1. Allure report
+1. Allure report : need to specify style
 2. Maven failsafe 
 3. Cucumber 
 
