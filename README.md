@@ -7,7 +7,7 @@ demo.opencart.com
 
 
 # Install Opencart in your local Ubuntu (optional)
-- https://github.com/sarkershantonu/hardware/tree/master/install-scripts/opencart
+
 
 # Agile Board 
 https://trello.com/b/MVdb3O1a/weekend-project-automation-ui-selenium
